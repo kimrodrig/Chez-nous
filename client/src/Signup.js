@@ -21,7 +21,7 @@ function Signup() {
         e.preventDefault();
 
         fetch("http://localhost:3000/members", {
-            // mode: 'no-cors',
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 'Accept': 'application/json',
