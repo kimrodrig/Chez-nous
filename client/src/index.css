@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'IM Fell French Canon', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(231, 216, 216);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header-text {
+  font-style: italic;
+  font-size: larger;
+}
+
+.form {
+  /* background-color: #15172b; */
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+}
+
+.title {
+  font-style: italic;
+  font-size: 80px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.logo {
+  font-size: 100px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #e7e2e2;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: rgb(72, 70, 70);
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  /* background-color: #15172b; */
+  border-radius: 10px;
+  height: 20px;
+  left: 10px;
+  position: absolute;
+  top: -2px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 100px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(-38px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+/* 
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-40px);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #252550;
+}
+
+.input:focus ~ .placeholder {
+  color: #81414f;
+} */
+
+.submit {
+  background-color: rgb(67, 64, 64);
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: rgb(28, 27, 27);
+}
