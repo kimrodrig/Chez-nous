@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :members, only: [:index, :create]
+  
+  namespace :api do
+    resources :members, only: [:index, :create]
 
-  post '/members', to: 'members#create'
+    post '/join', to: 'members#create'
+  end
 end
