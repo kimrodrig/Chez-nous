@@ -17,7 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_26_005902) do
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.integer "phone"
+    t.bigint "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
