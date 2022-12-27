@@ -44,7 +44,7 @@ code {
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -86,7 +86,7 @@ code {
   top: -2px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 100px;
+  width: 300px;
 }
 
 .cut-short {
