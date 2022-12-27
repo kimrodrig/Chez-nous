@@ -6,6 +6,8 @@ default: &default
   pool: 5
   username: kimrodrig
   password:
+  socket: /tmp/.s.PGSQL.5432
+
 
 development:
   <<: *default
