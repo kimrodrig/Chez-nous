@@ -22,7 +22,7 @@ function Signup() {
     function submitInfo(e) {
         e.preventDefault();
 
-        fetch("http://localhost:3000/join", {
+        fetch("http://localhost:3000/api/join", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
