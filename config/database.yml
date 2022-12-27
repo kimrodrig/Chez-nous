@@ -1,17 +1,19 @@
-default: &default
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   # For details on connection pooling, see rails configuration guide
+#   # http://guides.rubyonrails.org/configuring.html#database-pooling
+#   pool: 5
+
+
+development: &default
+  <<: *default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: kimrodrig
-  password:
-  socket: /tmp/.s.PGSQL.5432
-
-
-development:
-  <<: *default
   database: "development_cheznous"
+  # socket: /tmp/.s.PGSQL.5432
+
 
 test:
   <<: *default
@@ -19,5 +21,9 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
   database: "production_cheznous"
   url: <%= ENV['DATABASE_URL'] %>
+  username: ctvhxnnmrscnwt
+  password: 4e391c797638a8821a5d4f94d35713434f8e2afb0bff71b8761d2639173051e5
+
