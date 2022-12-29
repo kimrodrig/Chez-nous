@@ -13,6 +13,20 @@ class Api::MembersController < ApplicationController
         end
     end
 
+    def get_id_by_phone
+        member = Member.find_by(phone: member_params[:phone])
+        if member
+            render json: member.id, status: :ok
+        else
+            render json: { message: "number not found"}, status: 400
+        end
+    end
+
+    def destroy
+        member = Member.find(params[:id])
+        member.destroy
+    end
+
     private
 
     def member_params

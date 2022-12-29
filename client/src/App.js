@@ -1,6 +1,7 @@
 import Signup from './Signup';
 import Success from './Success';
 import Unsubscribe from './Unsubscribe';
+import SuccessfullyUnsubscribed from './SuccessfullyUnsubscribed';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
 
@@ -15,9 +16,8 @@ function App() {
         chez nous
         </span>
       </div>
-
-      <Unsubscribe/>
-      {/* <Router>
+      
+      <Router>
         <Routes>
           <Route path="/" element={<Signup/>}>
           </Route>
@@ -25,8 +25,10 @@ function App() {
           </Route>
           <Route path="/unsubscribe" element={<Unsubscribe/>}>
           </Route>
+          <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}>
+          </Route>
         </Routes>
-      </Router> */}
+      </Router>
 
     </div>
   );

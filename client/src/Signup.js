@@ -29,9 +29,11 @@ function Signup() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name: name,
-                email: email,
-                phone: phone
+                member: {
+                    name: name,
+                    email: email,
+                    phone: phone
+                }
             })
         })
         .then(res=> {if (res.status === 201){
