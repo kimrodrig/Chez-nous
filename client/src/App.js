@@ -1,5 +1,6 @@
 import Signup from './Signup';
 import Success from './Success';
+import Unsubscribe from './Unsubscribe';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
 
@@ -15,14 +16,17 @@ function App() {
         </span>
       </div>
 
-      <Router>
+      <Unsubscribe/>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<Signup/>}>
           </Route>
           <Route path="/success" element={<Success/>}>
           </Route>
+          <Route path="/unsubscribe" element={<Unsubscribe/>}>
+          </Route>
         </Routes>
-      </Router>
+      </Router> */}
 
     </div>
   );
