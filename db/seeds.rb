@@ -7,4 +7,3 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-Member.create(name: "Namely Mann", email: "namely@example.com", phone: 1234567890)

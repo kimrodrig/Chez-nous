@@ -4,6 +4,11 @@ class Api::MembersController < ApplicationController
         render json: Member.all
     end
     
+    def show
+        member = Member.find(params[:id])
+        render json: member
+    end
+
     def create
         member = Member.new(member_params)
         if member.save
@@ -13,10 +18,10 @@ class Api::MembersController < ApplicationController
         end
     end
 
-    def get_id_by_phone
+    def get_member_by_phone
         member = Member.find_by(phone: member_params[:phone])
         if member
-            render json: member.id, status: :ok
+            render json: member, status: :ok
         else
             render json: { message: "number not found"}, status: 400
         end
@@ -28,6 +33,7 @@ class Api::MembersController < ApplicationController
     end
 
     private
+
 
     def member_params
         params.require(:member).permit(:name, :email, :phone)

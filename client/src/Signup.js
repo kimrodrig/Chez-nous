@@ -16,8 +16,8 @@ function Signup() {
         phone: phone
     })
 
-    console.log(errors)
-    console.log(errors.name)
+    // console.log(errors)
+    // console.log(errors.name)
 
     function submitInfo(e) {
         e.preventDefault();
@@ -48,7 +48,7 @@ function Signup() {
         <div>
             <div className="subtitle">
                 <span>
-                You're invited to join us.
+                you're invited to join us.
                 </span> 
             </div>
             <form onSubmit={submitInfo}>
