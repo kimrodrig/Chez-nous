@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     patch '/editreservation/:id', to: 'reservations#update'
     patch '/editreservationwithmemberid/:id', to: 'reservations#update_with_member_id'
 
-    get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
+  end
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
   end
 end
