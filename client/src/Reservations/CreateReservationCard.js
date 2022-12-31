@@ -92,8 +92,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         })
     }
 
-    console.log(showNameAndEmailField)
-
     return (
         <div>
             { showNameAndEmailField ?
