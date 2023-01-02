@@ -42,9 +42,9 @@ function ReservationAdminPage() {
                     </div>
                 </div>
                 <button className="submit" type="submit">Create</button>
+                <label>time</label>
+                <input type="datetime-local" onChange={(e)=>setDatetime(e.target.value)}></input>
             </form>
-            <label>time</label>
-            <input type="datetime-local" onChange={(e)=>setDatetime(e.target.value)}></input>
         </div>
     )
 }

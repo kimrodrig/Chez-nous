@@ -10,6 +10,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
     const [partySize, setPartySize] = useState(2)
     const [dietaryRestrictions, setDietaryRestrictions] = useState([])
     const [member, setMember] = useState({})
+    const [reservation, setReservation] = useState({})
     const [reservationSubmitted, setReservationSubmitted] = useState(false)
     const [showNameAndEmailField, setShowNameAndEmailField] = useState(false)
     const [error, setError] = useState("")
@@ -83,7 +84,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
             body: body
         })
         .then(res=> {if (res.status === 200) {
-                res.json().then(data=>console.log(data))
+                res.json().then(data=>setReservation(data))
                 setReservationSubmitted(true);
             } else {
                 console.log("failure")
@@ -107,7 +108,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                 {date}
             </div>
             { reservationSubmitted ?
-            <ReservationSuccessful member={member}/>
+            <ReservationSuccessful member={member} reservation={reservation}/>
             :
             <div>
                 <div className="gray-subtitle">

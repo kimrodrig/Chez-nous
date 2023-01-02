@@ -63,7 +63,7 @@ function EditReservationCard({setEditingReservation, reservation, member}) {
                 {/* {date} */}
             </div>
             { reservationSubmitted ?
-            <ReservationSuccessful member={member} 
+            <ReservationSuccessful member={member} reservatio={member.reservation}
             // datetime={selectedReservation.datetime}
             />
             :

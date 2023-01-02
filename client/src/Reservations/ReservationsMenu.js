@@ -6,7 +6,6 @@ function ReservationsMenu({date, availableReservations}) {
     const nav = useNavigate();
     const [reservationsAreOpen, setReservationsAreOpen] = useState(true)
 
-    console.log(availableReservations.length)
     useEffect(() => {
         if (availableReservations.length === 0){
             setReservationsAreOpen(false)

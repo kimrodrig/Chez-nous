@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import moment from 'moment'
 
-function ReservationSuccessful({member}) {
+function ReservationSuccessful({member, reservation}) {
 
+    console.log(reservation)
     
     return (
         <div className="container">
@@ -10,7 +11,7 @@ function ReservationSuccessful({member}) {
                 thank you, {member.name} 
             </div>
             <div className="subtitle">
-                your reservation at {moment.utc(member.reservation?.datetime).format("h:mm A")} for {member.reservation?.party_size} is made. please submit your deposit and come on time, with cash. you'll hear from us soon.
+                your reservation at {moment.utc(reservation?.datetime).format("h:mm A")} for {reservation?.party_size} is made. please submit your deposit and come on time, with cash. you'll hear from us soon.
             </div>
         </div>
     )
