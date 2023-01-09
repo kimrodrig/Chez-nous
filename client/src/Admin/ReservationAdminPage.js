@@ -6,7 +6,7 @@ function ReservationAdminPage({reservations}) {
     const [memberId, setMemberId] = useState(0)
     const [datetime, setDatetime] = useState(0)
 
-    console.log(reservations[0].member?.name)
+    // console.log(reservations[0].member?.name)
 
     function createReservation(e) {
         e.preventDefault();
