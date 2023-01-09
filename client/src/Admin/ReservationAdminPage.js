@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
 
-function ReservationAdminPage() {
+function ReservationAdminPage({reservations}) {
 
     const [memberId, setMemberId] = useState(0)
     const [datetime, setDatetime] = useState(0)
 
-    console.log(datetime)
+    console.log(reservations[0].member?.name)
 
     function createReservation(e) {
         e.preventDefault();
@@ -45,6 +45,12 @@ function ReservationAdminPage() {
                 <label>time</label>
                 <input type="datetime-local" onChange={(e)=>setDatetime(e.target.value)}></input>
             </form>
+            {reservations.map(reservation => 
+                <div>
+                    <div>{reservation.member?.name}</div>
+                    <div>{reservation.datetime}</div>
+                </div>
+                )}
         </div>
     )
 }

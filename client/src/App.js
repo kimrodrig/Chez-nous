@@ -5,14 +5,14 @@ import SuccessfullyUnsubscribed from './SuccessfullyUnsubscribed';
 import ReservationsMenu from './Reservations/ReservationsMenu';
 import BookReservation from './Reservations/BookReservation';
 import ModifyReservation from './Reservations/ModifyReservation';
-import ReservationAdminPage from './Reservations/ReservationAdminPage';
+import ReservationAdminPage from './Admin/ReservationAdminPage';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import './App.css';
 import {useEffect, useState} from 'react'
 
 function App() {
   
-  const [date, setDate] = useState("january 3")
+  const [date, setDate] = useState("january 17")
   const [reservations, setReservations] = useState([])
 
   useEffect(()=>{
@@ -50,7 +50,7 @@ function App() {
           </Route>
           <Route path="/modifyreservation" element={<ModifyReservation date={date}/>}>
           </Route>
-          <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate}/>}></Route>
+          <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}></Route>
         </Routes>
       </Router>
 

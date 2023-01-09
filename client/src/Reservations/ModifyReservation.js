@@ -57,7 +57,9 @@ function ModifyReservation() {
             },
             body: JSON.stringify({
                 reservation: {
-                    member_id: 0
+                    member_id: 0,
+                    dietary_restrictions: [],
+                    party_size: null,
                 }
             })
         })
