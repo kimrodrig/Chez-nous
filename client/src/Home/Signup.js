@@ -1,12 +1,16 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
 
 function Signup() {
 
+    const [phone, setPhone] = useState(0)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
-    const [phone, setPhone] = useState(0)
     const [errors, setErrors] = useState({})
+    const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
 
     const nav = useNavigate();
 
@@ -16,36 +20,68 @@ function Signup() {
         phone: phone
     })
 
-    // console.log(errors)
-    // console.log(errors.name)
+    function parseNames(name) {
+        const names = name.split(' ')
+        const [first, ...last] = names
+        setFirstName(first)
+        setLastName(last.join(' '))
+    }
+
+    function postToMailChimp(body){
+        const API_KEY = process.env.MAILCHIMP_API_KEY;
+        const LIST_ID = process.env.MAILCHIMP_LIST_ID;
+        const DATACENTER = process.env.MAILCHIMP_API_KEY.split("-")[1]
+
+        const url = `https://"${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;
+
+        const data = {
+            first_name: firstName,
+            last_name: lastName,
+            email_address: email,
+            status: "subscribed",
+        };
+
+        const base64ApiKey = Buffer.from(`anystring:${API_KEY}`).toString("base64");
+        const headers = {
+            "Content-Type": "application/json",
+            Authorization: `Basic ${base64ApiKey}`,
+        };
+
+        return {
+            url,
+            data,
+            headers,
+        };
+    }
 
     function submitInfo(e) {
         e.preventDefault();
 
-        fetch("/api/join", {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                member: {
-                    name: name,
-                    email: email,
-                    phone: phone
-                }
-            })
-        })
-        .then(res=> {if (res.status === 201){
-                nav("/success")
-            } else if (res.status === 400){
-                (res.json()).then(data=>setErrors(data.errors))
-            }
-        })
+        
+        // fetch("/api/join", {
+        //     method: "POST",
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         member: {
+        //             name: name,
+        //             email: email,
+        //             phone: phone
+        //         }
+        //     })
+        // })
+        // .then(res=> {if (res.status === 201){
+        //         nav("/success")
+        //     } else if (res.status === 400){
+        //         (res.json()).then(data=>setErrors(data.errors))
+        //     }
+        // })
     }
 
     return (
-        <div>
+        <div className="p-10">
             <div className="subtitle">
                 <span>
                 you're invited to join us.

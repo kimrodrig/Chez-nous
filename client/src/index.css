@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   margin: 0;
@@ -183,4 +186,9 @@ code {
   padding-top: 10px;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.about-p {
+  text-align: left;
+  font-size: 20px;
 }

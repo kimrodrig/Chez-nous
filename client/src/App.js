@@ -1,4 +1,4 @@
-import Signup from './Signup';
+import Home from './Home/Home';
 import Success from './Success';
 import Unsubscribe from './Unsubscribe';
 import SuccessfullyUnsubscribed from './SuccessfullyUnsubscribed';
@@ -36,7 +36,7 @@ function App() {
       
       <Router>
         <Routes>
-          <Route path="/" element={<Signup/>}>
+          <Route path="/" element={<Home/>}>
           </Route>
           <Route path="/success" element={<Success/>}>
           </Route>
