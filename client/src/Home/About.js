@@ -20,7 +20,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          Last Tuesday we had our friends and family dinner which was  honestly delicious, and the reviews we got were, I hope, deliciously honest: the duck "was perfect" and the dessert comprised "the best waffle [she'd] ever had." I’m attaching the menu from that dinner below. Our next dinner is on Tuesday, January 17. We expect to keep the menu largely the same for that, but of course there will be modifications. We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance! You can do so when you book a reservation. We look forward to seeing you soon!
+          Last Tuesday we had our friends and family dinner which was  honestly delicious, and the reviews we got were, I hope, deliciously honest: the duck “was perfect" and the dessert comprised “the best waffle [she'd] ever had." I’m attaching the menu from that dinner below. Our next dinner is on Tuesday, January 17. We expect to keep the menu largely the same for that, but of course there will be modifications. We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance! You can do so when you book a reservation. We look forward to seeing you soon!
         </p>
     </div>
     )
