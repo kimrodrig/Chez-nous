@@ -4,15 +4,15 @@ function About() {
   return (
     <div className="p-5 max-w-xl">
         <p className="about-p">
-          <em>chez nous</em> is a restaurant run out of a residential apartment. We—the two of us, Kevin and Kim—believe a lot of restaurant overhead is unnecessary and obstructive to gastronomy. Commercial real estate, excessive and outdated equipment, passionless drones on the line, delivery costs, the archaic ‘gratuity’ system, abundant waste: all of these aspects are actually sabotaging your meal when you eat out.
+          <em>chez nous</em> is a restaurant run out of a residential apartment. We—the two of us, Kevin and Kim—believe a lot of restaurant overhead is unnecessary and obstructive to gastronomy. Commercial real estate, excessive and outdated equipment, passionless drones on the line, delivery costs, the archaic ‘gratuity’ system, abundant waste: you are actually paying the hidden price for all of this when you eat out.
         </p>
         <br/>
         <p className="about-p">
-          Our dinner is different. We’ve crafted a beautiful tasting menu with complete creative autonomy, since we’re working from home. And the costs—physical, financial, emotional—are lower than they would be if we had to contend with everything I listed above. So dinner is much less expensive (and better) than it would be elsewhere. And more experimental!
+          Our dinner is different. We’ve married our Michelin experience and technique with state-of-the-art culinary tech that has only become available in the last few years. The hours Kevin spends in the kitchen experimenting like a mad chemist regularly produces more ideas than we can fit on our two menus. And since we exercise total creative liberty in crafting our menu, we end up with a beautiful and unique degustation for each dinner.
         </p>
         <br/>
         <p className="about-p">
-          I don’t want to give too much away. But I want to provide a clear picture of what you might be signing up for. Right now, we're in Long Island City. We set up a handful of tables in a living room, and when you reserve one, you are booking a full four-plus course menu (including unscripted surprises) with a wine and cocktail pairing. We’re cooking and expediting from the kitchen using modern space- and energy-efficient appliances.
+          Right now, we're in Long Island City. We set up a handful of tables in a living room, and when you reserve one, you are booking a full four-plus course menu (including unscripted surprises) with a wine and cocktail pairing. We’re cooking and expediting from the kitchen.
         </p>
         <br/>
         <p className="about-p">  
@@ -20,7 +20,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          Last Tuesday we had our friends and family dinner which was  honestly delicious, and the reviews we got were, I hope, deliciously honest: the duck “was perfect" and the dessert comprised “the best waffle [she'd] ever had." Our next dinner is on Tuesday, January 17. We expect to keep the menu largely the same for that, but of course there will be modifications. We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance! You can do so when you book a reservation. 
+          We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance! You can do so when you book a reservation. 
         </p>
         <br/>
         <p className="about-p">
