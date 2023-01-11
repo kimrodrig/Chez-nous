@@ -9,7 +9,7 @@ import ReservationsMenu from './Reservations/ReservationsMenu';
 import BookReservation from './Reservations/BookReservation';
 import ModifyReservation from './Reservations/ModifyReservation';
 import ReservationAdminPage from './Admin/ReservationAdminPage';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import './App.css';
 import {useEffect, useState} from 'react'
 
@@ -27,18 +27,21 @@ function App() {
   const availableReservations = reservations.filter(reservation => reservation.member_id === 0)
 
   return (
-    <div className="App">
-      <div>
-        <div className="logo">
-        𓂀
-        </div>
-        <span className="title">
-        chez nous
-        </span>
-      </div>
       
+    <div className="App">
       <Router>
+        
+          <Link to="/">
+            <div className="logo">
+            𓂀
+            </div>
+            <span className="title">
+            chez nous
+            </span>
+          </Link>
+
         <Routes>
+        
           <Route path="/" element={<Home/>}>
             <Route index element={<Signup/>}/>
             <Route path="/about" element={<About/>}/>

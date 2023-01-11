@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Success() {
     return (
@@ -7,7 +8,7 @@ function Success() {
             <div className='subtitle'>
                 you're on our list! 
                 <br/>
-                you'll hear from us soon.
+                <Link to="/reservations">head here to make a reservation.</Link>
             </div>
         </div>
     )
