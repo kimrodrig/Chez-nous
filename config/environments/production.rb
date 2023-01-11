@@ -3,19 +3,17 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  config .action_mailer.default_url_options = { host: 'www.cheznous.com', protocol: 'https'}
+  config.action_mailer.default_url_options = { host: 'www.cheznous.com', protocol: 'https'}
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.office365.com',
-    port:                 587,
-    domain:               'www.cheznousnyc.com',
-    user_name:            ENV['EMAIL_USERNAME'],
-    password:             ENV['EMAIL_PASSWORD'],
-    authentication:       'login',
-    enable_starttls_auto: true,
-    open_timeout:         5,
-    read_timeout:         5 
+    :user_name => 'apikey', 
+    :password => ENV['SENDGRID_API_KEY'],
+    :domain => 'localhost:3000',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
 
   # Code is not reloaded between requests.
