@@ -10,7 +10,7 @@ function Unsubscribe() {
 
     function submitPhoneNumber(e){
         e.preventDefault();
-        fetch("/api/getidbyphone", {
+        fetch("/api/getmemberbyphone", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -23,8 +23,8 @@ function Unsubscribe() {
             })
         }).then(res=> {
             if (res.status === 200){
-                res.json().then(id=>
-                    fetch(`/api/unsubscribe/${id}`, {
+                res.json().then(member=>
+                    fetch(`/api/unsubscribe/${member.id}`, {
                         method: "DELETE",
                     })
                 ).then(nav("/successfullyunsubscribed"))
@@ -34,7 +34,6 @@ function Unsubscribe() {
         })
     }
 
-    
 
     return (
         <div>

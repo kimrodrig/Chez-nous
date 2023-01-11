@@ -1,3 +1,3 @@
 class BookedReservationSerializer < ActiveModel::Serializer
-    attributes :id, :datetime
+    attributes :id, :datetime, :party_size
 end

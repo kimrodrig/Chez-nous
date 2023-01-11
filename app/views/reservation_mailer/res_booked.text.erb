@@ -1,0 +1,33 @@
+
+<%= @member.name %>, your reservation is confirmed.
+
+Date: <%= @date%>
+Time: <%= @time%>
+Number of guests: <%= @reservation.party_size%>
+Location: 47-46 40th St, Apartment 4E, Queens, NY 11104 (2 blocks from the 40th St - Lowery stop on the 7 train)
+
+
+Please read! 
+
+
+Deposit:
+
+
+You need to submit a $25 deposit per person ($<%= @total_deposit%> total) in the next day to keep your reservation. You can pay via venmo: @cheznousnyc (it's under Kevin's real name Gustavo Hermosa). If you don't have venmo or it isn't working, please contact me at 781-572-2781 or kim@cheznousnyc.com and we'll figure it out. 
+
+The price is $125 total, so please bring $100 in cash per person in your party ($<%=@total_payment%> total) in order to complete your payment. 
+
+
+Allergies, herbivory, and strong dislikes:
+
+
+We have received these dietary restrictions for your party: <%= @dietaries == [] ? "none" : @dietaries.join(', ') %>
+
+If this is inaccurate or incomplete, please let us know by modifying your reservation (www.cheznousnyc.com/modifyreservation) or by contacting me (contact info above)!!
+
+
+That's it for now.
+
+Looking forward to seeing you soon!
+
+Kim

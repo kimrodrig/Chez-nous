@@ -11,11 +11,11 @@ function BookReservation({date, availableReservations}) {
             ?
             <CreateReservationCard selectedReservation={availableReservations.filter(res => res.id === selectedEmptyReservationId)[0]} setSelectedEmptyReservationId={setSelectedEmptyReservationId} date={date}/>
             :
-            <div className="container">
+            <div className="px-3 max-w-xl">
                 <div className="subtitle-larger">
                     book a reservation for {date}
                 </div>
-                <div className="subtitle">
+                <div className="subtitle font-sans">
                     available times:
                 </div>
                 {availableReservations.map(res => <TimeSlotCard reservation={res} setSelectedEmptyReservationId={setSelectedEmptyReservationId}/>)}

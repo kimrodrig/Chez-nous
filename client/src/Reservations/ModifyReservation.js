@@ -87,13 +87,13 @@ function ModifyReservation() {
             { alert !== "" ?
             <div>
                 <div className="subtitle-larger">{alert}</div>
-                <div className="subtitle" onClick={()=>nav("/reservations")}>make a reservation</div>
+                <div className="subtitle font-sans" onClick={()=>nav("/reservations")}>make a reservation</div>
             </div> :
             <div></div>
             }
             
             { (reservation) ? 
-            <div className="container">
+            <div className="px-3 max-w-xl font-sans">
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
                 <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>Edit reservation</button>

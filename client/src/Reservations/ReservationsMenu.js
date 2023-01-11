@@ -18,17 +18,17 @@ function ReservationsMenu({date, availableReservations}) {
                 reservations {reservationsAreOpen ? "are open": "are now closed"} for {date}
             </div>
             { reservationsAreOpen ? 
-            <div className="subtitle" onClick={()=>nav("/bookreservation")}>
+            <div className="subtitle font-sans" onClick={()=>nav("/bookreservation")}>
                 make a reservation
             </div>
             :
-            <div className="subtitle">
+            <div className="subtitle font-sans">
                 please join us for our next event.
                 <br/>
                 you'll hear from us, if you're on our list.
             </div>
             }
-            <div className="subtitle" onClick={()=>nav("/modifyreservation")}>
+            <div className="subtitle font-sans" onClick={()=>nav("/modifyreservation")}>
                 modify your reservation
             </div>
         </div>

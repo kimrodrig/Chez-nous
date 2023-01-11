@@ -1,0 +1,62 @@
+<div class="logo" style="text-align: center">
+  <%= image_tag attachments['logo.png'].url, alt: 'chez nous', style: 'width:400px' %>
+</div>
+
+<hr style="height: 1px; background: black; width: 50%"/>
+
+<br/>
+<h1 style="text-align: center">your reservation <em>chez nous</em></h1>
+
+<p>
+  <%= @member.name %>, your reservation is confirmed:
+</p>
+<p>
+  Date: <strong> <%= @date%> </strong>
+</p>
+  Time: <strong> <%= @time%> </strong>
+</p>
+<p>
+  Number of guests: <strong> <%= @reservation.party_size%> </strong>
+</p>
+<p>
+  Location: <strong> 47-46 40th St, Apt 4E, Queens, NY 11104 </strong>(2 blocks from the 40th St - Lowery stop on the 7 train) 
+</p>
+<br/>
+<h3> Please read! </h3>
+<br/>
+
+<strong> Deposit </strong>
+
+<p>
+  You need to submit a $25 deposit per person ($<%= @total_deposit%> total) by tomorrow to keep your reservation. You can pay via venmo: @cheznousnyc (it's under Kevin's true culinary name, Gustavo Hermosa). 
+ </p>
+<p> 
+  If you don't have venmo or it isn't working, please contact me at 781-572-2781 or <a href='mailto:kim@cheznousnyc.com'>kim@cheznousnyc.com</a> and we'll figure it out. 
+</p>
+<p>
+  The price is $125 total, so please bring $100 in cash per person in your party ($<%=@total_payment%> total) in order to complete your payment. 
+</p>
+<br/>
+
+  <strong> Allergies, herbivory, and strong dislikes </strong>
+<p>
+  We have received the following information regarding your party's dietary restrictions: 
+  <%= @dietaries == [] ? "none" : @dietaries.join(', ') %>
+</p>
+<p>
+  If this is inaccurate or incomplete, please let us know by <a href='www.cheznousnyc.com/modifyreservation'>modifying your reservation</a> or by contacting me (contact info above) !
+</p>
+<br/>
+
+<strong>
+  That's it for now.
+</strong>
+<br/>
+<br/>
+
+<p>
+  Looking forward to seeing you soon!
+</p>
+<p>
+  Kim
+</p>

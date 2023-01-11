@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post '/createreservation', to: 'reservations#create'
     patch '/editreservation/:id', to: 'reservations#update'
     patch '/editreservationwithmemberid/:id', to: 'reservations#update_with_member_id'
+    post '/mailchimp', to: "members#subscribe_to_mailchimp"
 
   end
   

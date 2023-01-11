@@ -95,7 +95,18 @@ GEM
     debug (1.7.1)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
+    faraday (2.7.2)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
+    gibbon (3.4.4)
+      faraday (>= 1.0)
+      multi_json (>= 1.11.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -125,6 +136,7 @@ GEM
     mini_portile2 (2.8.1)
     minitest (5.16.3)
     msgpack (1.6.0)
+    multi_json (1.15.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -179,6 +191,7 @@ GEM
     reline (0.3.2)
       io-console (~> 0.5)
     rexml (3.2.5)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.7.1)
       rexml (~> 3.2, >= 3.2.5)
@@ -228,6 +241,8 @@ DEPENDENCIES
   byebug
   capybara
   debug
+  dotenv-rails
+  gibbon
   importmap-rails
   jbuilder
   pg

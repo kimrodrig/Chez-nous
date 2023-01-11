@@ -2,13 +2,15 @@ import React from 'react'
 import Signup from './Signup'
 import About from './About';
 import Menu from './Menu';
+import Navbar from './Navbar'
+import {Outlet} from 'react-router-dom'
+
 
 function Home() {
   return (
     <div>
-        <Signup/>
-        <About/>
-        <Menu/>
+        <Navbar/>
+        <Outlet/>
     </div>
   )
 }

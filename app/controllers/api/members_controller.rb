@@ -31,9 +31,8 @@ class Api::MembersController < ApplicationController
         member = Member.find(params[:id])
         member.destroy
     end
-
+    
     private
-
 
     def member_params
         params.require(:member).permit(:name, :email, :phone)

@@ -4,17 +4,12 @@ import ReservationSuccessful from './ReservationSuccessful';
 
 function EditReservationCard({setEditingReservation, reservation, member}) {
     const [phone, setPhone] = useState(0)
+    const [modifiedReservation, setModifiedReservation] = useState(reservation)
     const [other, setOther] = useState("")
     const [partySize, setPartySize] = useState(2)
     const [dietaryRestrictions, setDietaryRestrictions] = useState([])
     const [memberId, setMemberId] = useState(0)
     const [reservationSubmitted, setReservationSubmitted] = useState(false)
-
-    // make checkboxes/other prechecked
-
-    useEffect(()=>{
-        setPartySize(reservation.party_size)
-    },[])
 
     function handleCheck(e){
         if (e.target.checked){
@@ -48,7 +43,9 @@ function EditReservationCard({setEditingReservation, reservation, member}) {
             body: body
         })
         .then(res=> {if (res.status === 200) {
-                setReservationSubmitted(true);
+                res.json().then(data =>
+                    setModifiedReservation(data)).then(
+                    setReservationSubmitted(true))
             } else {
                 console.log("failure")
                 // (res.json()).then(data=>setErrors(data.errors))
@@ -63,12 +60,11 @@ function EditReservationCard({setEditingReservation, reservation, member}) {
                 {/* {date} */}
             </div>
             { reservationSubmitted ?
-            <ReservationSuccessful member={member} reservatio={member.reservation}
+            <ReservationSuccessful member={member} reservation={modifiedReservation}
             // datetime={selectedReservation.datetime}
             />
             :
             <div>
-                {/* {selectedReservation.datetime} datetime here */}
                 <form onSubmit={()=>{}}>
                     <div className="input-container ic2">
                         <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
@@ -80,18 +76,6 @@ function EditReservationCard({setEditingReservation, reservation, member}) {
                             <label for="party" class="placeholder">party of</label>
                         </div>
                     </div>
-
-                    {/* <div className="input-container ic2">
-                        <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
-                            <option value="1">1</option>
-                            <option value="2" selected>2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                        <div class="cut">
-                            <label for="party" class="placeholder">party of</label>
-                        </div>
-                    </div> */}
                     
                     <div className="dr-container">
                         <div className="gray-subtitle">dietary restrictions</div>

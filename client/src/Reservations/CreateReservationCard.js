@@ -66,7 +66,28 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         .then(submitReservation(member.id))
     } 
 
+    // function sendConfirmationEmail(member, reservation){
+    //     const transporter = nodemailer.createTransport({
+    //         host: "your-smtp-server",
+    //         port: 587,
+    //         secure: false,
+    //         auth: {
+    //           user: "smtp-user",
+    //           pass: "smtp-password"
+    //         }
+    //       });
+
+    //       let info = await transporter.sendMail({
+    //         from: "foo@example.com",
+    //         to: "bar@example.com, baz@example.com",
+    //         subject: "Hello",
+    //         text: "Hello world",
+    //       });
+    // }
+
     function submitReservation(id){
+        setShowNameAndEmailField(false)
+
         const body = JSON.stringify({
             reservation: {
                 dietary_restrictions: ((other === "") ? dietaryRestrictions : [...dietaryRestrictions, other]),
@@ -85,6 +106,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         })
         .then(res=> {if (res.status === 200) {
                 res.json().then(data=>setReservation(data))
+                // sendConfirmationEmail();
                 setReservationSubmitted(true);
             } else {
                 console.log("failure")

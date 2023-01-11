@@ -9,12 +9,13 @@ class Api::ReservationsController < ApplicationController
     end
 
     def create
-        reservation = Reservation.create!(reservation_params)
-        render json: reservation, status: :created
+        @reservation = Reservation.create!(reservation_params)
+        render json: @reservation, status: :created
     end
 
     def update
-        find_reservation.update!(reservation_params)
+        find_reservation.update(reservation_params)
+        ReservationMailer.with(member: find_reservation.member, reservation: find_reservation).res_booked.deliver_later
         render json: find_reservation, status: :ok
     end
 

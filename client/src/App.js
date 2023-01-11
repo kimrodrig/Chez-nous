@@ -1,3 +1,6 @@
+import Signup from './Home/Signup';
+import Menu from './Home/Menu';
+import About from './Home/About';
 import Home from './Home/Home';
 import Success from './Success';
 import Unsubscribe from './Unsubscribe';
@@ -37,20 +40,18 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home/>}>
+            <Route index element={<Signup/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/menu" element={<Menu/>}/>
           </Route>
-          <Route path="/success" element={<Success/>}>
-          </Route>
-          <Route path="/unsubscribe" element={<Unsubscribe/>}>
-          </Route>
-          <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}>
-          </Route>
-          <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}>
-          </Route>
-          <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}>
-          </Route>
-          <Route path="/modifyreservation" element={<ModifyReservation date={date}/>}>
-          </Route>
-          <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}></Route>
+          
+          <Route path="/success" element={<Success/>}/>
+          <Route path="/unsubscribe" element={<Unsubscribe/>}/>
+          <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}/>
+          <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
+          <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}/>
+          <Route path="/modifyreservation" element={<ModifyReservation date={date}/>}/>
+          <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}/>
         </Routes>
       </Router>
 
