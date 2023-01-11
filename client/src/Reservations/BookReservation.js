@@ -18,7 +18,9 @@ function BookReservation({date, availableReservations}) {
                 <div className="subtitle font-sans">
                     available times:
                 </div>
+                <div className="pb-10">
                 {availableReservations.map(res => <TimeSlotCard reservation={res} setSelectedEmptyReservationId={setSelectedEmptyReservationId}/>)}
+                </div>
             </div>
             }
         </div>
