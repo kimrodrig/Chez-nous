@@ -82,19 +82,19 @@ function EditReservationCard({setEditingReservation, reservation, member}) {
                         <div>
                             <div className="column">
                                 <input type="checkbox" id="dr1" name="dr1" value="vegan" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr1" className="label">vegan</label>
+                                <label for="dr1" className="label">vegan </label>
                                 <input type="checkbox" id="dr2" name="dr2" value="vegetarian" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr2" className="label">vegetarian</label>
+                                <label for="dr2" className="label">vegetarian </label>
                                 <input type="checkbox" id="dr3" name="dr3" value="pescatarian" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr3" className="label">pescatarian</label>
+                                <label for="dr3" className="label">pescatarian </label>
                             </div>
                             <div className="column">
                                 <input type="checkbox" id="dr4" name="dr4" value="dairy" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr4" className="label">no dairy</label>
+                                <label for="dr4" className="label">no dairy </label>
                                 <input type="checkbox" id="dr5" name="dr5" value="nuts" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr5" className="label">no nuts</label>
+                                <label for="dr5" className="label">no nuts </label>
                                 <input type="checkbox" id="dr6" name="dr6" value="gluten" onChange={(e)=>handleCheck(e)}/>
-                                <label for="dr6" className="label">no gluten</label> 
+                                <label for="dr6" className="label">no gluten </label> 
                             </div>  
                             <div className="input-container ic2">
                                 <input className="input" type="tel" name="phone" placeholder=" " onChange={(e)=>{

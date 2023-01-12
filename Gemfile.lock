@@ -254,7 +254,7 @@ DEPENDENCIES
   gibbon
   importmap-rails
   jbuilder
-  mandrill-api
+  mandrill-api (~> 1.0, >= 1.0.53)
   pg
   puma (~> 5.0)
   rack-cors
