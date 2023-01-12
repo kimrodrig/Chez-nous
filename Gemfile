@@ -81,5 +81,3 @@ gem 'rack-cors'
 gem 'gibbon'
 
 gem 'exception_notification', :require => 'exception_notifier'
-
-gem 'mandrill-api', '~> 1.0', '>= 1.0.53'

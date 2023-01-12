@@ -103,7 +103,6 @@ GEM
     exception_notification (4.5.0)
       actionmailer (>= 5.2, < 8)
       activesupport (>= 5.2, < 8)
-    excon (0.97.1)
     faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -124,7 +123,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (1.8.6)
     jsonapi-renderer (0.2.2)
     loofah (2.19.1)
       crass (~> 1.0.2)
@@ -134,9 +132,6 @@ GEM
       net-imap
       net-pop
       net-smtp
-    mandrill-api (1.0.55)
-      excon (>= 0.16.0, < 1.0)
-      json (>= 1.7.7, < 2.0)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -254,7 +249,6 @@ DEPENDENCIES
   gibbon
   importmap-rails
   jbuilder
-  mandrill-api (~> 1.0, >= 1.0.53)
   pg
   puma (~> 5.0)
   rack-cors
