@@ -1,9 +1,14 @@
 import React, {useState} from 'react'
 import TimeSlotCard from './TimeSlotCard'
 import CreateReservationCard from './CreateReservationCard'
+import moment from 'moment'
 
 function BookReservation({date, availableReservations}) {
     const [selectedEmptyReservationId, setSelectedEmptyReservationId] = useState(false)
+
+    availableReservations.sort((a,b)=> 
+        new Date(a.datetime).getTime() - new Date(b.datetime).getTime()
+    )
 
     return (
         <div>
