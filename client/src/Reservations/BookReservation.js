@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import TimeSlotCard from './TimeSlotCard'
 import CreateReservationCard from './CreateReservationCard'
-import moment from 'moment'
 
 function BookReservation({date, availableReservations}) {
     const [selectedEmptyReservationId, setSelectedEmptyReservationId] = useState(false)

@@ -79,3 +79,7 @@ gem 'active_model_serializers'
 gem 'rack-cors'
 
 gem 'gibbon'
+
+gem 'exception_notification', :require => 'exception_notifier'
+
+# gem 'mandrill-api'

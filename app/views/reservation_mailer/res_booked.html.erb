@@ -1,11 +1,10 @@
-<div class="logo" style="text-align: center">
-  <%= image_tag attachments['logo.png'].url, alt: 'chez nous', style: 'width:400px' %>
-</div>
+
+<h1 style="text-align: center">
+<%= image_tag attachments['logo.png'].url, alt: 'chez nous', style: 'width:400px' %>
 
 <hr style="height: 1px; background: black; width: 50%"/>
-
-<br/>
-<h1 style="text-align: center">your reservation <em>chez nous</em></h1>
+your reservation <em>chez nous</em>
+</h1>
 
 <p>
   <%= @member.name %>, your reservation is confirmed:
@@ -28,7 +27,7 @@
 <strong> Deposit </strong>
 
 <p>
-  You need to submit a $25 deposit per person ($<%= @total_deposit%> total) by tomorrow to keep your reservation. You can pay via venmo: @cheznousnyc (it's under Kevin's true culinary name, Gustavo Hermosa). 
+  You need to submit a $25 deposit per person ($<%= @total_deposit%> total) by tomorrow to keep your reservation. You can pay <a href='https://venmo.com/cheznousnyc'>via venmo</a>: @cheznousnyc (it's under Kevin's true culinary name, Gustavo Hermosa). 
  </p>
 <p> 
   If you don't have venmo or it isn't working, please contact me at 781-572-2781 or <a href='mailto:kim@cheznousnyc.com'>kim@cheznousnyc.com</a> and we'll figure it out. 
@@ -44,7 +43,7 @@
   <%= @dietaries == [] ? "none" : @dietaries.join(', ') %>
 </p>
 <p>
-  If this is inaccurate or incomplete, please let us know by <a href='www.cheznousnyc.com/modifyreservation'>modifying your reservation</a> or by contacting me (contact info above) !
+  If this is inaccurate or incomplete, please let us know by <a href='http://www.cheznousnyc.com/modifyreservation'>modifying your reservation</a> or by contacting me (contact info above) !
 </p>
 <br/>
 

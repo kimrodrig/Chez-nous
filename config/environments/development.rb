@@ -13,13 +13,15 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :user_name => 'apikey', 
-  :password => ENV['SENDGRID_API_KEY'],
+  :password => ENV['MANDRILL_API_KEY'],
   :domain => 'localhost:3000',
-  :address => 'smtp.sendgrid.net',
+  :address => 'smtp.mandrillapp.com',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
   }
+
+  config.action_mailer.default_url_options = {host: "smtp.mandrillapp.com",}
 
   # Do not eager load code on boot.
   config.eager_load = false
