@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ReservationSuccessful from './ReservationSuccessful';
 import moment from 'moment';
 
-function EditReservationCard({setEditingReservation, reservation, member, availableReservations, cancelReservation}) {
+function EditReservationCard({setEditingReservation, reservation, member, availableReservations}) {
     const [modifiedReservation, setModifiedReservation] = useState(reservation)
     const [other, setOther] = useState("")
     const [partySize, setPartySize] = useState(2)
@@ -40,6 +40,23 @@ function EditReservationCard({setEditingReservation, reservation, member, availa
             // (res.json()).then(data=>setErrors(data.errors))
         }
     })
+    }
+
+    function cancelReservation(id){
+        fetch(`/api/editreservation/${id}`, {
+            method: "PATCH",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                reservation: {
+                    member_id: 0,
+                    dietary_restrictions: [],
+                    party_size: null,
+                }
+            })
+        })
     }
 
     function handleReservationSubmission(){

@@ -60,10 +60,7 @@ function ModifyReservation({availableReservations}) {
                     party_size: null,
                 }
             })
-        })
-    }
-    function cancelReservationAndSetState(id){
-        cancelReservation(id).then(res=> {if (res.status === 200) {
+        }).then(res=> {if (res.status === 200) {
                 setReservationIsCancelled(true)
             } else {
                 console.log("failure")
@@ -80,7 +77,7 @@ function ModifyReservation({availableReservations}) {
         )
     } else if (editingReservation) {
         return (
-            <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member} availableReservations={availableReservations} cancelReservation={cancelReservation}/>
+            <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member} availableReservations={availableReservations}/>
         )
     } else return (
         <div>
@@ -97,7 +94,7 @@ function ModifyReservation({availableReservations}) {
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
                 <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>Edit reservation</button>
-                <button className="submit" type="submit" onClick={()=>cancelReservationAndSetState(reservation.id)}>Cancel reservation</button>
+                <button className="submit" type="submit" onClick={()=>cancelReservation(reservation.id)}>Cancel reservation</button>
             </div>
             :
             <div>
