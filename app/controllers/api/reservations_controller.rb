@@ -28,6 +28,11 @@ class Api::ReservationsController < ApplicationController
         end
     end
 
+    def get_reservation_by_time
+        reservation = Reservation.find_by(datetime: params[:datetime])
+        render json: reservation, status: :ok
+    end
+
     def destroy
         find_reservation.destroy
     end

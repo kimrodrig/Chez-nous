@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post '/getmemberbyphone', to: 'members#get_member_by_phone'
     post '/createreservation', to: 'reservations#create'
     patch '/editreservation/:id', to: 'reservations#update'
+    post '/getreservationbytime', to: 'reservations#get_reservation_by_time'
     patch '/editreservationwithmemberid/:id', to: 'reservations#update_with_member_id'
     post '/mailchimp', to: "members#subscribe_to_mailchimp"
 

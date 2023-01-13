@@ -5,10 +5,6 @@ import CreateReservationCard from './CreateReservationCard'
 function BookReservation({date, availableReservations}) {
     const [selectedEmptyReservationId, setSelectedEmptyReservationId] = useState(false)
 
-    availableReservations.sort((a,b)=> 
-        new Date(a.datetime).getTime() - new Date(b.datetime).getTime()
-    )
-
     return (
         <div>
             { selectedEmptyReservationId 

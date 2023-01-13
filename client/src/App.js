@@ -26,6 +26,10 @@ function App() {
 
   const availableReservations = reservations.filter(reservation => reservation.member_id === 0)
 
+  availableReservations.sort((a,b)=> 
+    new Date(a.datetime).getTime() - new Date(b.datetime).getTime()
+  )
+  
   return (
       
     <div className="App">
@@ -53,7 +57,7 @@ function App() {
           <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}/>
           <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
           <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}/>
-          <Route path="/modifyreservation" element={<ModifyReservation date={date}/>}/>
+          <Route path="/modifyreservation" element={<ModifyReservation date={date} availableReservations={availableReservations}/>}/>
           <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}/>
         </Routes>
       </Router>

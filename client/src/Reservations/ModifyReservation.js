@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import EditReservationCard from './EditReservationCard'
 import moment from 'moment'
 
-function ModifyReservation() {
+function ModifyReservation({availableReservations}) {
     
         const [member, setMember] = useState({})
         const [phone, setPhone] = useState(0)
@@ -46,10 +46,8 @@ function ModifyReservation() {
         })
     }
 
-    console.log(member)
-
-    function cancelReservation(){
-        fetch(`/api/editreservation/${reservation.id}`, {
+    function cancelReservation(id){
+        fetch(`/api/editreservation/${id}`, {
             method: "PATCH",
             headers: {
                 'Accept': 'application/json',
@@ -63,7 +61,9 @@ function ModifyReservation() {
                 }
             })
         })
-        .then(res=> {if (res.status === 200) {
+    }
+    function cancelReservationAndSetState(id){
+        cancelReservation(id).then(res=> {if (res.status === 200) {
                 setReservationIsCancelled(true)
             } else {
                 console.log("failure")
@@ -80,7 +80,7 @@ function ModifyReservation() {
         )
     } else if (editingReservation) {
         return (
-            <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member}/>
+            <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member} availableReservations={availableReservations} cancelReservation={cancelReservation}/>
         )
     } else return (
         <div>
@@ -97,7 +97,7 @@ function ModifyReservation() {
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
                 <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>Edit reservation</button>
-                <button className="submit" type="submit" onClick={()=>cancelReservation()}>Cancel reservation</button>
+                <button className="submit" type="submit" onClick={()=>cancelReservationAndSetState(reservation.id)}>Cancel reservation</button>
             </div>
             :
             <div>
