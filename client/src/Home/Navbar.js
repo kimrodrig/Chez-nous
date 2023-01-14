@@ -6,19 +6,21 @@ function Navbar() {
     return (
         <div> 
             <nav class="ml-2 mr-2">
-                <div class="max-w-screen-xl px-4 py-3 mx-auto md:px-6">
+                <div class="max-w-screen-xl px-5 py-3 mx-auto md:px-6">
                     <div class="flex items-center">
-                        <ul class="flex-1 flex-row mt-0 px-10 space-x-12 font-sans text-lg">
-                    
-                            <NavLink class="hover:font-bold" exact="true" to="/" >
-                                Signup
+                        <ul class="flex-1 flex-row mt-0 px-8 space-x-8 font-['Lato'] text-xl italic py-2.5 rounded shadow-md">
+                            <NavLink exact="true" to="/" >
+                                signup
                             </NavLink>
-                            <NavLink class="hover:font-bold" to="/about">
-                                About
+                            <NavLink to="/about">
+                                about
                             </NavLink>
-                            <NavLink class="hover:font-bold" to="/menu">
-                                Menu
-                            </NavLink>                  
+                            <NavLink to="/menu">
+                                menu
+                            </NavLink>   
+                            <NavLink to="/reservations">
+                                reservations
+                            </NavLink>               
                         </ul>
                     </div>
                 </div>

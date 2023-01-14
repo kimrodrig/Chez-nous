@@ -50,12 +50,12 @@ function App() {
             <Route index element={<Signup/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/menu" element={<Menu/>}/>
+            <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
           </Route>
           
           <Route path="/success" element={<Success/>}/>
           <Route path="/unsubscribe" element={<Unsubscribe/>}/>
           <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}/>
-          <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
           <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}/>
           <Route path="/modifyreservation" element={<ModifyReservation date={date} availableReservations={availableReservations}/>}/>
           <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}/>

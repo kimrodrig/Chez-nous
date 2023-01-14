@@ -3,9 +3,12 @@ import BookReservation from './BookReservation';
 import ReservationSuccessful from './ReservationSuccessful';
 import moment from 'moment';
 import {useNavigate} from 'react-router-dom';
+import { constructFromObject } from '@mailchimp/mailchimp_marketing/src/ApiClient';
 
 function CreateReservationCard({selectedReservation, setSelectedEmptyReservationId, date}) {
     const [phone, setPhone] = useState(0)
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
     const [other, setOther] = useState("")
     const [partySize, setPartySize] = useState(2)
     const [dietaryRestrictions, setDietaryRestrictions] = useState([])
@@ -14,6 +17,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
     const [reservationSubmitted, setReservationSubmitted] = useState(false)
     const [showNameAndEmailField, setShowNameAndEmailField] = useState(false)
     const [error, setError] = useState("")
+    const [errors, setErrors] = useState({})
 
     const nav = useNavigate()
 
@@ -27,6 +31,15 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
 
     function handleSubmit(e){
         e.preventDefault()
+
+        if (showNameAndEmailField) {
+            signupMember()
+        } else {
+            findMember()
+        }   
+    }
+
+    function findMember(){
         fetch("/api/getmemberbyphone", {
             method: 'POST',
             headers: {
@@ -66,25 +79,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         .then(submitReservation(member.id))
     } 
 
-    // function sendConfirmationEmail(member, reservation){
-    //     const transporter = nodemailer.createTransport({
-    //         host: "your-smtp-server",
-    //         port: 587,
-    //         secure: false,
-    //         auth: {
-    //           user: "smtp-user",
-    //           pass: "smtp-password"
-    //         }
-    //       });
-
-    //       let info = await transporter.sendMail({
-    //         from: "foo@example.com",
-    //         to: "bar@example.com, baz@example.com",
-    //         subject: "Hello",
-    //         text: "Hello world",
-    //       });
-    // }
-
     function submitReservation(id){
         setShowNameAndEmailField(false)
 
@@ -106,7 +100,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         })
         .then(res=> {if (res.status === 200) {
                 res.json().then(data=>setReservation(data))
-                // sendConfirmationEmail();
                 setReservationSubmitted(true);
             } else {
                 console.log("failure")
@@ -115,17 +108,34 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         })
     }
 
+    function signupMember(){
+        fetch("/api/join", {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                member: {
+                    name: name,
+                    email: email,
+                    phone: phone
+                }
+            })
+        })
+        .then(res=> {if (res.status === 201){
+                res.json().then(data => setMember(data)).then(submitReservation())
+            } else if (res.status === 400){
+                (res.json()).then(data=>setErrors(data.errors))
+            }
+        })
+    }
+    
+    console.log(errors)
+
     return (
         <div>
-            { showNameAndEmailField ?
-            <div className="subtitle" onClick={()=>{nav('/')}}>
-                this phone number is
-                not yet 
-                on our list. <br></br>
-                please register here first.
-            </div>  :
-            <div></div>
-            }
+            
             <div className="subtitle-larger">
                 {date}
             </div>
@@ -136,6 +146,14 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                 <div className="gray-subtitle">
                     {moment.utc(selectedReservation.datetime).format("h:mm A")} 
                 </div>
+
+                { showNameAndEmailField ? 
+                <div className="subtitle pb-5">
+                    this phone number is not yet on our list.
+                </div> :
+                <div></div>
+                }
+
                 <form onSubmit={()=>{}}>
                     <div className="input-container ic2">
                         <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
@@ -153,7 +171,28 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                             <label for="phone" class="placeholder">phone</label>
                         </div>
                     </div>
-                    
+                    <div>{errors.phone}</div>
+                    { showNameAndEmailField ?
+                        <div>
+                            <div className="input-container ic2">
+                                <input className="input" type="text" name="name" placeholder=" " onChange={(e)=>setName(e.target.value)}></input>
+                                <div class="cut">
+                                    <label for="name" class="placeholder">name</label>
+                                </div>
+                            </div>
+                            <div>{errors.name}</div>
+
+                            <div className="input-container ic2">
+                                <input className="input" type="text" name="email" placeholder=" " onChange={(e)=>setEmail(e.target.value)}></input>
+                                <div class="cut">
+                                    <label for="email" class="placeholder">email</label>
+                                </div>
+                            </div>
+                            <div>{errors.email}</div>
+
+                        </div>  :
+                        <div></div>
+                    }
                     <div className="dr-container">
                         <div className="gray-subtitle">dietary restrictions</div>
                         <div>

@@ -12,6 +12,7 @@
     "buffer": "^6.0.3",
     "install": "^0.13.0",
     "moment": "^2.29.4",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "nodemailer": "^6.8.0",
     "npm": "^9.2.0",
     "querystring-es3": "^0.2.1",

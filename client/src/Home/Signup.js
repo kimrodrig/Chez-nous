@@ -1,39 +1,16 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom'
 
-function Signup() {
+function Signup({signupMember}) {
 
     const [phone, setPhone] = useState(0)
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [errors, setErrors] = useState({})
 
-    const nav = useNavigate();
-
     function submitInfo(e) {
         e.preventDefault();
 
-
-        fetch("/api/join", {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                member: {
-                    name: name,
-                    email: email,
-                    phone: phone
-                }
-            })
-        })
-        .then(res=> {if (res.status === 201){
-                nav("/success")
-            } else if (res.status === 400){
-                (res.json()).then(data=>setErrors(data.errors))
-            }
-        })
+        signupMember(name, phone, email)
     }
 
     return (
