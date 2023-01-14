@@ -12,6 +12,7 @@ import ReservationAdminPage from './Admin/ReservationAdminPage';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import './App.css';
 import {useEffect, useState} from 'react'
+import logo from './logo.png'
 
 function App() {
   
@@ -36,9 +37,7 @@ function App() {
       <Router>
         
           <Link to="/">
-            <div className="logo">
-            𓂀
-            </div>
+            <img className="logo" src={logo} alt="logo"/>
             <span className="title">
             chez nous
             </span>
