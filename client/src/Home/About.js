@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="p-5 max-w-xl text-justify">
+    <div className="p-5 max-w-xl">
         <p className="about-p">
           <em>chez nous</em> is a restaurant run out of a residential apartment. We—the two of us, Kevin and Kim—believe a lot of restaurant overhead is unnecessary and obstructive to gastronomy. Commercial real estate, excessive and outdated equipment, passionless drones on the line, delivery costs, the archaic ‘gratuity’ system, abundant waste: you are actually paying the hidden price for all of this when you eat out.
         </p>
@@ -24,7 +24,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          To make a reservation, sign up, and you'll be ushered to the reservations page. Or you can wait for an email from us and do it later. We look forward to seeing you soon!
+          To make a reservation, sign up, and you'll be ushered to the reservations page. Or you can go to the reservations page directly, and enter your details when you book a table. We look forward to seeing you soon!
         </p>
     </div>
     )
