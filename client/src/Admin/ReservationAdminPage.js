@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-
+import ReservationCard from './ReservationCard'
 
 function ReservationAdminPage({reservations}) {
 
-    const [memberId, setMemberId] = useState(0)
     const [datetime, setDatetime] = useState(0)
 
     // console.log(reservations[0].member?.name)
@@ -19,7 +18,7 @@ function ReservationAdminPage({reservations}) {
             },
             body: JSON.stringify({
                 reservation: {
-                    member_id: memberId,
+                    member_id: 0,
                     datetime: datetime
                 }
             })
@@ -33,24 +32,14 @@ function ReservationAdminPage({reservations}) {
     }
     return (
         <div>
-            create reservations
+            create more reservations
             <form onSubmit={createReservation}>
-                <div className="input-container ic2">
-                    <input className="input" type="tel" name="phone" placeholder=" " onChange={(e)=>setMemberId(parseInt(e.target.value))}></input>
-                    <div class="cut">
-                        <label for="phone" class="placeholder">member id</label>
-                    </div>
-                </div>
-                <button className="submit" type="submit">Create</button>
-                <label>time</label>
                 <input type="datetime-local" onChange={(e)=>setDatetime(e.target.value)}></input>
+                <button className="submit" type="submit">Create</button>
             </form>
             {reservations.map(reservation => 
-                <div>
-                    <div>{reservation.member?.name}</div>
-                    <div>{reservation.datetime}</div>
-                </div>
-                )}
+                <ReservationCard reservation={reservation}/>
+            )}
         </div>
     )
 }

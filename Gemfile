@@ -81,3 +81,5 @@ gem 'rack-cors'
 gem 'gibbon'
 
 gem 'exception_notification', :require => 'exception_notifier'
+
+gem 'bcrypt'

@@ -8,7 +8,7 @@ import SuccessfullyUnsubscribed from './SuccessfullyUnsubscribed';
 import ReservationsMenu from './Reservations/ReservationsMenu';
 import BookReservation from './Reservations/BookReservation';
 import ModifyReservation from './Reservations/ModifyReservation';
-import ReservationAdminPage from './Admin/ReservationAdminPage';
+import AdminMenu from './Admin/AdminMenu';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import './App.css';
 import {useEffect, useState} from 'react'
@@ -38,12 +38,17 @@ function App() {
         
           <Link to="/">
             <img className="logo" src={logo} alt="logo"/>
-            <span className="title">
+            <div className="title -mt-3 -mb-2">
             chez nous
-            </span>
+            </div> 
+            <div className="uppercase font-sans tracking-widest mb-5">
+            modern dining experience
+            </div>
           </Link>
 
-        <Routes>
+          <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-700"/>
+
+          <Routes>
         
           <Route path="/" element={<Home/>}>
             <Route index element={<Signup/>}/>
@@ -57,7 +62,7 @@ function App() {
           <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}/>
           <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}/>
           <Route path="/modifyreservation" element={<ModifyReservation date={date} availableReservations={availableReservations}/>}/>
-          <Route path="/reservationadminpage" element={<ReservationAdminPage setDate={setDate} reservations={reservations}/>}/>
+          <Route path="/admin" element={<AdminMenu setDate={setDate} reservations={reservations}/>}/>
         </Routes>
       </Router>
 
