@@ -14,6 +14,7 @@ class ReservationMailer < ApplicationMailer
     @total_deposit = @reservation.party_size * 25
     @total_payment = @reservation.party_size * 100
     @dietaries = @reservation.dietary_restrictions
+    @venmo_code = "1-17-" + @member.id.to_s
 
     mail( 
       from: 'kim@cheznousnyc.com',

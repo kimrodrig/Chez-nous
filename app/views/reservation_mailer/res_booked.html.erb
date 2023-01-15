@@ -1,6 +1,6 @@
 
 <h1 style="text-align: center">
-<%= image_tag attachments['logo.png'].url, alt: 'chez nous', style: 'width:400px' %>
+<%= image_tag attachments['logo.png'].url, alt: 'chez nous', style: 'width:250px' %>
 
 <hr style="height: 1px; background: black; width: 50%"/>
 your reservation <em>chez nous</em>
@@ -27,7 +27,8 @@ your reservation <em>chez nous</em>
 <strong> Deposit </strong>
 
 <p>
-  You need to submit a $25 deposit per person ($<%= @total_deposit%> total) by tomorrow to keep your reservation. You can pay <a href='https://venmo.com/cheznousnyc'>via venmo</a>: @cheznousnyc (it's under Kevin's true culinary name, Gustavo Hermosa). 
+  You need to submit a $25 deposit per person ($<%= @total_deposit%> total) by tomorrow to keep your reservation. You can pay <a href='https://venmo.com/cheznousnyc'>via venmo</a>: @cheznousnyc (it's under Kevin's true culinary name, Gustavo Hermosa). You can put "<%=@venmo_code%>" as the description.
+
  </p>
 <p> 
   If you don't have venmo or it isn't working, please contact me at 781-572-2781 or <a href='mailto:kim@cheznousnyc.com'>kim@cheznousnyc.com</a> and we'll figure it out. 
