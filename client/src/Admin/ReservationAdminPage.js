@@ -37,6 +37,8 @@ function ReservationAdminPage({reservations}) {
                 <input type="datetime-local" onChange={(e)=>setDatetime(e.target.value)}></input>
                 <button className="submit" type="submit">Create</button>
             </form>
+            <br/>
+            <div>reservations:</div>
             {reservations.map(reservation => 
                 <ReservationCard reservation={reservation}/>
             )}

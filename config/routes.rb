@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     resources :members
     resources :reservations
+    resources :users, only: [:create, :show]
+    resources :sessions
 
     post '/join', to: 'members#create'
     delete '/unsubscribe/:id', to: 'members#destroy'
@@ -12,6 +14,9 @@ Rails.application.routes.draw do
     post '/getreservationbytime', to: 'reservations#get_reservation_by_time'
     patch '/editreservationwithmemberid/:id', to: 'reservations#update_with_member_id'
     post '/mailchimp', to: "members#subscribe_to_mailchimp"
+
+    post "/login", to: "sessions#create"
+    delete "/sessions", to: "sessions#destroy"
 
   end
   

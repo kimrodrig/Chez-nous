@@ -131,8 +131,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
         })
     }
     
-    console.log(errors)
-
     return (
         <div>
             
