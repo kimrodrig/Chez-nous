@@ -38,7 +38,7 @@ function Signup() {
 
     return (
 
-        <div className="mx-5">
+        <div className="mx-5 pb-10">
             <div className="subtitle">
                 <span>
                 you're invited to join us.
