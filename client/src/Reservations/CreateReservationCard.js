@@ -211,7 +211,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                                 <label for="dr6" className="label">no gluten </label> 
                             </div>  
                             <div className="input-container ic2">
-                                <input className="input" type="tel" name="phone" placeholder=" " onChange={(e)=>{
+                                <input className="input" type="text" name="other" placeholder=" " onChange={(e)=>{
                                     setOther(e.target.value);
                                     }}></input>
                                 <div class="cut">
