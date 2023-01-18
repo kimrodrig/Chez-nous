@@ -16,7 +16,7 @@ import logo from './logo.png'
 
 function App() {
   
-  const [date, setDate] = useState("january 17")
+  const [date, setDate] = useState("january 22")
   const [reservations, setReservations] = useState([])
 
   useEffect(()=>{
@@ -34,7 +34,7 @@ function App() {
   return (
       
     <div className="App">
-      <div className="pb-8">
+      <div className="pb-8 px-3">
         <Router>
           
             <Link to="/">
