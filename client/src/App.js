@@ -16,7 +16,7 @@ import logo from './logo.png'
 
 function App() {
   
-  const [date, setDate] = useState("january 22")
+  const [date, setDate] = useState("january 29")
   const [reservations, setReservations] = useState([])
 
   useEffect(()=>{
