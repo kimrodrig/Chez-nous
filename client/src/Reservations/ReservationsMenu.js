@@ -13,7 +13,7 @@ function ReservationsMenu({date, availableReservations}) {
     }, [availableReservations])
 
     return (
-        <div>
+        <div className="pb-10">
             <div className="subtitle-larger">
                 reservations {reservationsAreOpen ? "are open": "are now closed"} for {date}
             </div>
