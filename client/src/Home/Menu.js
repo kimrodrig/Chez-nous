@@ -44,7 +44,7 @@ function Menu() {
                     alt="..."
                 />
                 <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">chez nous</h5>
+                    <h5 class="text-xl"></h5>
                 </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
@@ -54,7 +54,7 @@ function Menu() {
                     alt="..."
                 />
                 <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">tasting menu</h5>
+                    <h5 class="text-xl"></h5>
                 </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
@@ -64,7 +64,7 @@ function Menu() {
                     alt="..."
                 />
                 <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">vegan menu</h5>
+                    <h5 class="text-xl"></h5>
                 </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
@@ -74,7 +74,7 @@ function Menu() {
                     alt="..."
                 />
                 <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl">beverage pairing</h5>
+                    <h5 class="text-xl"></h5>
                 </div>
                 </div>
             </div>

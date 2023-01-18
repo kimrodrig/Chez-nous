@@ -8,7 +8,7 @@ body {
   font-family: 'IM Fell French Canon', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(231, 216, 216);
+  background-color: rgb(227, 219, 219);
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -79,7 +79,7 @@ code {
 }
 
 .input {
-  background-color: #e7e2e2;
+  background-color: #f3eeee;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;

@@ -16,7 +16,7 @@ function Navbar() {
                                 about
                             </NavLink>
                             <NavLink to="/menu">
-                                menu
+                                menus
                             </NavLink>   
                             <NavLink to="/reservations">
                                 reservations
