@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 import BookReservation from './BookReservation';
 import ReservationSuccessful from './ReservationSuccessful';
 import moment from 'moment';
-import {useNavigate} from 'react-router-dom';
-import { constructFromObject } from '@mailchimp/mailchimp_marketing/src/ApiClient';
 
 function CreateReservationCard({selectedReservation, setSelectedEmptyReservationId, date}) {
     const [phone, setPhone] = useState(0)
@@ -19,7 +17,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
     const [error, setError] = useState("")
     const [errors, setErrors] = useState({})
 
-    const nav = useNavigate()
 
     function handleCheck(e){
         if (e.target.checked){

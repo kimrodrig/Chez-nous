@@ -34,7 +34,7 @@ function App() {
   return (
       
     <div className="App">
-      <div className="pb-8 px-3">
+      <div className="pb-8">
         <Router>
           
             <Link to="/">

@@ -43,9 +43,6 @@ function Menu() {
                     class="block w-full"
                     alt="..."
                 />
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl"></h5>
-                </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
                 <img
@@ -53,9 +50,6 @@ function Menu() {
                     class="block w-full"
                     alt="..."
                 />
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl"></h5>
-                </div>
                 </div>
                 <div class="carousel-item relative float-left w-full">
                 <img
@@ -73,9 +67,6 @@ function Menu() {
                     class="block w-full"
                     alt="..."
                 />
-                <div class="carousel-caption hidden md:block absolute text-center">
-                    <h5 class="text-xl"></h5>
-                </div>
                 </div>
             </div>
             <button

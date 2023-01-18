@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 function Unsubscribe() {
 
     const [phone, setPhone] = useState(0)
-    const [id, setId] = useState(0)
     const [error, setError] = useState("")
     const nav = useNavigate();
 
