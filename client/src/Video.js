@@ -53,7 +53,7 @@ function Video() {
                         </div>                    
                     </div>
                     <div 
-                    class="z-30 text-white fixed bottom-0 mb-8 space-x-5"
+                    class="z-30 text-white fixed bottom-0 mb-4 space-x-5"
                     >
                         <a type="button" href="http://www.instagram.com/cheznousnyc">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6">
