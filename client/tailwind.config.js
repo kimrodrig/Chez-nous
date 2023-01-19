@@ -8,7 +8,8 @@ module.exports = {
       }
     },
     letterSpacing: {
-      widest: '0.27em'
+      wide: '0.03em',
+      widest: '0.27em',
     }
   },
   plugins: [

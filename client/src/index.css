@@ -13,7 +13,9 @@ body {
   font-family: 'IM Fell French Canon', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e3dbdb;
+  /* background-color: #e3dbdb; */
+  background-color: rgb(30, 30, 30);
+  color: rgb(236, 233, 233);
   display: flex;
   justify-content: center;
   height: 95vh;
@@ -165,7 +167,7 @@ code {
 } */
 
 .submit {
-  background-color: #434040;
+  background-color: #4d4a4a;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -181,7 +183,7 @@ code {
 }
 
 .submit:active {
-  background-color: #1c1b1b;
+  background-color: #6f6c6c;
 }
 
 .container {

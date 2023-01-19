@@ -3,7 +3,7 @@ import Header from "../Header";
 import Footer from "../Footer";
 
 const Layout = () => {
-    document.body.style.backgroundColor = "#e3dbdb";
+    document.body.style.backgroundColor = "#1e1e1e;"
     return (
         <div className="pb-3">
             <Header />

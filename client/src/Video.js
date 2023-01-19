@@ -1,16 +1,11 @@
 import React from 'react'
 import video from './img/video.mp4'
-import { NavLink} from "react-router-dom";
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-
+import { NavLink} from "react-router-dom"
 
 
 function Video() {
 
-    document.body.style.backgroundColor = "black";
-
     return (
-        // <SafeAreaProvider>
             <div>
                 <header
                 class="flex items-center justify-center h-screen overflow-hidden"
@@ -79,7 +74,6 @@ function Video() {
                         ></video>
                 </header>
             </div>
-        // </SafeAreaProvider>
     )
 }
 
