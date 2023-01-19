@@ -19,7 +19,7 @@ function Video() {
                     class="relative z-30 p-5 text-2xl text-white bg-opacity-50 rounded-xl"
                     >
                         <div>
-                            <div className="video-title -mt-3 mb-6">
+                            <div className="video-title mt-20 mb-6">
                                 chez nous
                             </div> 
                             <div className="video-subtitle uppercase font-sans tracking-widest font-semibold mb-5">
@@ -75,7 +75,7 @@ function Video() {
                         preLoad="auto"
                         playsInline={true}
                         loop
-                        class="min-w-full min-h-full max-w-screen absolute object-cover"
+                        class="min-w-full min-h-[105%] max-w-screen absolute object-cover"
                         ></video>
                 </header>
             </div>
