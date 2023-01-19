@@ -6,6 +6,7 @@
 html {
   margin: env(safe-area-inset);
   padding: env(safe-area-inset);
+  min-height: -webkit-fill-available;
 }
 
 @supports(padding:max(0px)){
@@ -26,6 +27,7 @@ body {
   display: flex;
   justify-content: center;
   height: 100vh;
+  height: calc(100% + 193px);
   
 }
 
