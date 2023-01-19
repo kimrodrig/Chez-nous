@@ -7,7 +7,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 function Video() {
 
-    // document.body.style.backgroundColor = "black";
+    document.body.style.backgroundColor = "black";
 
     return (
         // <SafeAreaProvider>

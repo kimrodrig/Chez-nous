@@ -4,6 +4,7 @@ import Navbar from "../Home/Navbar";
 import Footer from "../Footer";
 
 const NavbarLayout = () => {
+    document.body.style.backgroundColor = "#e3dbdb";
     return (
         <div className="pb-3">
             <Header />
