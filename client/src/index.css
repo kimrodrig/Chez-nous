@@ -8,7 +8,7 @@ body {
   font-family: 'IM Fell French Canon', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(227, 219, 219);
+  background-color: #e3dbdb;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -37,6 +37,26 @@ code {
   font-style: italic;
   font-size: 80px;
   font-weight: 600;
+}
+
+.video-title {
+  font-style: italic;
+  font-size: calc(40px + 10vw);
+  font-weight: 600;
+  margin-bottom: calc(10px + 5vw);
+}
+
+.video-subtitle {
+  font-size: calc(10px + 1.5vw);
+  margin-bottom: calc(45px + 3vw);
+}
+
+.video-navlink {
+  font-size: calc(20px + 1.2vw);
+  margin-bottom: calc(10px + 2vw);
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.2rem;
 }
 
 .logo {
@@ -140,7 +160,7 @@ code {
 } */
 
 .submit {
-  background-color: rgb(67, 64, 64);
+  background-color: #434040;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -156,7 +176,7 @@ code {
 }
 
 .submit:active {
-  background-color: rgb(28, 27, 27);
+  background-color: #1c1b1b;
 }
 
 .container {

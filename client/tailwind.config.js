@@ -2,7 +2,11 @@
 module.exports = {
   content: [ './src/**/*.{js,jsx,ts,tsx}', './node_modules/tw-elements/dist/js/**/*.js'],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'widescreen': {'raw': '(min-aspect-ratio: 3/2)'}
+      }
+    },
     letterSpacing: {
       widest: '0.27em'
     }

@@ -48,13 +48,13 @@ function Signup() {
                 <div className="input-container ic1">
                     <input className="input" type="text" name="name" placeholder=" " onChange={(e)=>setName(e.target.value)}></input>
                     <div class="cut">
-                        <label for="name" class="placeholder">name {errors.name}</label>
+                        <label for="name" class="placeholder">{(errors.name === undefined) ? "name" : errors.name}</label>
                     </div>
                 </div>
                 <div className="input-container ic2">
                     <input className="input" type="email" name="email" placeholder=" " onChange={(e)=>setEmail(e.target.value)}></input>   
                     <div class="cut">
-                        <label for="email" class="placeholder">email {errors.email}</label>
+                        <label for="email" class="placeholder">{(errors.email === undefined) ? "email" : errors.email}</label>
                     </div>
                 </div>
                 <div className="input-container ic2">

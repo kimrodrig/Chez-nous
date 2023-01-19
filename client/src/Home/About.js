@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="p-5 max-w-xl">
         <p className="about-p">
-          <em>chez nous</em> is a restaurant run out of a residential apartment. We—the two of us, Kevin and Kim—believe a lot of restaurant overhead is unnecessary and obstructive to gastronomy. Commercial real estate, excessive and outdated equipment, passionless drones on the line, delivery costs, the archaic ‘gratuity’ system, abundant waste: you are actually paying the hidden price for all of this when you eat out.
+          <em>chez nous</em> is a restaurant run out of a residential apartment. We—the two of us, Kevin and Kim—believe a lot of restaurant overhead is unnecessary and obstructive to gastronomy. Commercial real estate costs, excessive and outdated equipment, the archaic gratuity system, abundant waste: you are actually paying the hidden price for all of this when you eat out.
         </p>
         <br/>
         <p className="about-p">
@@ -12,7 +12,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          Right now, we're in Long Island City. We set up a handful of tables in a living room, and when you reserve one, you are booking a full four-plus course menu (including unscripted surprises) with a wine and cocktail pairing. We’re cooking and expediting from the kitchen.
+          Right now, we're in Brooklyn. We set up a handful of tables in a living room, and when you reserve one, you are booking a full four-plus course menu (including unscripted surprises) with a wine and cocktail pairing. We’re cooking and expediting from the kitchen.
         </p>
         <br/>
         <p className="about-p">  
