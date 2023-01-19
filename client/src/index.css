@@ -46,18 +46,18 @@ code {
 
 .video-title {
   font-style: italic;
-  font-size: calc(40px + 10vw);
+  font-size: calc(30px + 8vw);
   font-weight: 600;
   margin-bottom: calc(10px + 5vw);
 }
 
 .video-subtitle {
-  font-size: calc(10px + 1.5vw);
+  font-size: calc(6px + 1.5vw);
   margin-bottom: calc(45px + 3vw);
 }
 
 .video-navlink {
-  font-size: calc(20px + 1.2vw);
+  font-size: calc(15px + 1.2vw);
   margin-bottom: calc(10px + 2vw);
   font-weight: bold;
   font-style: italic;

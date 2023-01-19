@@ -70,11 +70,11 @@ function Video() {
                 
                     <video
                         src={video}
-                        muted
+                        muted={true}
                         autoPlay={"autoplay"}
                         preLoad="auto"
                         playsInline={true}
-                        loop
+                        loop={true}
                         class="min-w-full min-h-full max-w-screen absolute object-cover"
                         ></video>
                 </header>
