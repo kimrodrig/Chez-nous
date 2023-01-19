@@ -2,21 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 html {
   margin: env(safe-area-inset);
   padding: env(safe-area-inset);
   min-height: -webkit-fill-available;
-}
-
-@supports(padding:max(0px)){
-  body, header, footer {
-    padding-top: min(0vmin, env(safe-area-inset-top));
-    padding-bottom: min(0vmin, env(safe-area-inset-bottom));
-    padding-left: min(0vmin, env(safe-area-inset-left));
-    padding-right: min(0vmin, env(safe-area-inset-right));
-  }
-}
+} */
 
 body {
   margin: 0;
@@ -26,9 +17,8 @@ body {
   background-color: #e3dbdb;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   height: calc(100% + 193px);
-  
 }
 
 code {
