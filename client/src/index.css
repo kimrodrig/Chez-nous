@@ -6,7 +6,6 @@
 html {
   margin: env(safe-area-inset);
   padding: env(safe-area-inset);
-  min-height: -webkit-fill-available;
 } */
 
 body {
@@ -17,8 +16,7 @@ body {
   background-color: #e3dbdb;
   display: flex;
   justify-content: center;
-  /* height: 100vh; */
-  height: calc(100% + 193px);
+  height: 95vh;
 }
 
 code {
