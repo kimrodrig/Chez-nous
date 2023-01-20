@@ -83,7 +83,7 @@ code {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.025em;
 }
 
 .subtitle-larger {
@@ -177,8 +177,16 @@ code {
   background-color: #6f6c6c;
 }
 
+.modify-res:active {
+  background-color: #6f6c6c;
+}
+
 .light-submit:active {
-  background-color: rgb(200, 198, 198);
+  background-color: rgb(173, 170, 170);
+}
+
+.make-res:active {
+  background-color: rgb(173, 170, 170);
 }
 
 .container {
@@ -187,32 +195,18 @@ code {
 }
 
 .label {
-  color: #65657b;
+  color: #eee;
   font-family: sans-serif;
   left: 25px;
+  font-size: 16px;
   pointer-events: none;
   transition: transform 200ms, color 200ms;
-}
-
-.gray-subtitle {
-  color: #383843;
-  font-family: sans-serif;
-  font-size: 22px;
-  pointer-events: none;
-  transition: transform 200ms, color 200ms;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 
 .column {
   display:flex;
-  flex: 50%
-}
-
-.dr-container {
-  padding-top: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
+  align-items: center;
+  justify-items: center;
 }
 
 .about-p {
@@ -228,7 +222,7 @@ code {
   box-sizing: border-box;
   color: #3a3a3a;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   height: 50px;
   margin-top: 30px;
   outline: 0;
@@ -239,7 +233,7 @@ code {
 }
 
 .light-submit {
-  background-color: #b2b1b1;
+  background-color: #cac8c8;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -247,7 +241,7 @@ code {
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 20px;
+  margin-top: 30px;
   outline: 0;
   text-align: center;
   font-weight: bold;
@@ -262,7 +256,7 @@ code {
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   height: 50px;
   margin-top: 30px;
   outline: 0;

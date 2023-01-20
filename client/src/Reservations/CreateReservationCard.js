@@ -138,7 +138,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
             <ReservationSuccessful member={member} reservation={reservation}/>
             :
             <div>
-                <div className="subtitle font-sans">
+                <div className="subtitle-larger font-sans">
                     {moment.utc(selectedReservation.datetime).format("h:mm A")} 
                 </div>
 
@@ -178,11 +178,11 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                             </div>  :
                             <div></div>
                         }
-                        <div className="flex pt-6">
-                            <div className="subtitle">
+                        <div className="flex pt-6 pb-6 justify-between">
+                            <div className="px-1 mt-2.5 text-2xl">
                                 number of guests
                             </div>
-                            <div className="h-[50px]">
+                            <div className="h-[50px] mr-0">
                                 <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
                                     <option value="1">1</option>
                                     <option value="2" selected>2</option>
@@ -196,24 +196,24 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                         <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-400"/> 
                 
                         <div className="">
-                            <div className="subtitle">dietary restrictions</div>
+                            <div className="subtitle-larger">dietary restrictions</div>
                             <div>
-                                <div className="column">
+                                <div className="grid gap-4 grid-cols-4 grid-rows-3 mb-10 mt-5">
                                     <input type="checkbox" id="dr1" name="dr1" value="vegan" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr1" className="label">vegan </label>
                                     <input type="checkbox" id="dr2" name="dr2" value="vegetarian" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr2" className="label">vegetarian </label>
+                                
                                     <input type="checkbox" id="dr3" name="dr3" value="pescatarian" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr3" className="label">pescatarian </label>
-                                </div>
-                                <div className="column">
                                     <input type="checkbox" id="dr4" name="dr4" value="dairy" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr4" className="label">no dairy </label>
+                                
                                     <input type="checkbox" id="dr5" name="dr5" value="nuts" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr5" className="label">no nuts </label>
                                     <input type="checkbox" id="dr6" name="dr6" value="gluten" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr6" className="label">no gluten </label> 
-                                </div>  
+                                </div>
                                 <div className="input-container ic2">
                                     <input className="input" type="text" name="other" placeholder=" " onChange={(e)=>{
                                         setOther(e.target.value);
@@ -222,8 +222,6 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                                         <label for="other" class="placeholder">other dietary restrictions</label>
                                     </div>
                                 </div>
-                                <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-400"/> 
-
                             </div>
                         </div>
                     </form>   
