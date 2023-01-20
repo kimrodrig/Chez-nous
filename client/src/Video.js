@@ -66,7 +66,7 @@ function Video() {
                     <video
                         src={video}
                         muted={true}
-                        autoPlay={"autoplay"}
+                        autoPlay={true}
                         preLoad="auto"
                         playsInline={true}
                         loop={true}
