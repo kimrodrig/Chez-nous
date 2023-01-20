@@ -4,6 +4,7 @@ import CreateReservationCard from './CreateReservationCard'
 
 function BookReservation({date, availableReservations}) {
     const [selectedEmptyReservationId, setSelectedEmptyReservationId] = useState(false)
+    const [isSelected, setIsSelected] = useState(0)
 
     return (
         <div>
@@ -18,8 +19,8 @@ function BookReservation({date, availableReservations}) {
                 <div className="subtitle font-sans">
                     available times:
                 </div>
-                <div className="">
-                {availableReservations.map(res => <TimeSlotCard reservation={res} setSelectedEmptyReservationId={setSelectedEmptyReservationId}/>)}
+                <div className="grid grid-cols-2 gap-x-3">
+                    {availableReservations.map(res => <TimeSlotCard reservation={res} setSelectedEmptyReservationId={setSelectedEmptyReservationId}/>)}
                 </div>
             </div>
             }

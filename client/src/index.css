@@ -110,7 +110,7 @@ code {
 }
 
 .input {
-  background-color: #d9d7d7;
+  background-color: #dedede;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -191,6 +191,10 @@ code {
   background-color: rgb(173, 170, 170);
 }
 
+.timeslot:active {
+  background-color: rgb(173, 170, 170);
+}
+
 .container {
   margin-left: 10%;
   margin-right: 10%;
@@ -219,7 +223,7 @@ code {
 }
 
 .make-res {
-  background-color: #c5c5c5;
+  background-color: #dedede;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -236,7 +240,7 @@ code {
 }
 
 .make-res-full {
-  background-color: #c5c5c5;
+  background-color: #dedede;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -254,7 +258,7 @@ code {
 
 
 .light-submit {
-  background-color: #cac8c8;
+  background-color: #d5d5d5;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -288,7 +292,7 @@ code {
 }
 
 .timeslot {
-  background-color: #c5c5c5;
+  background-color: #dedede;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
@@ -297,11 +301,9 @@ code {
   font-size: 25px;
   height: 50px;
   margin-top: 15px;
-  margin-bottom: 15px;
-  outline: 0;
   text-align: center;
   font-weight: bold;
-  width: 70%;
+  width: 100%;
   font-family: sans-serif;
 }
 
