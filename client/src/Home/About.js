@@ -24,7 +24,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          To make a reservation, sign up, and you'll be ushered to the reservations page. Or you can go to the reservations page directly, and enter your details when you book a table. We look forward to seeing you soon!
+          Simply choose a time on our reservations page. We look forward to seeing you soon!
         </p>
     </div>
     )
