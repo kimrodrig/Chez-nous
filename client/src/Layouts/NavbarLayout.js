@@ -6,10 +6,13 @@ import Footer from "../Footer";
 const NavbarLayout = () => {
     document.body.style.backgroundColor = "#1e1e1e;"
     return (
-        <div className="pb-3">
-            <Header />
+        <div>
             <Navbar/>
-            <Outlet />
+            <Header />
+            <div className="flex justify-center">
+                <Outlet />
+
+            </div>
             <Footer />
         </div>
     );

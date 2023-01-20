@@ -108,52 +108,57 @@ function EditReservationCard({setEditingReservation, reservation, member, availa
             :
             <div>
                 <form onSubmit={()=>{}}>
-
-                    <div className="input-container ic2">
-                        <select className="input" name="time" placeholder=" " onChange={(e)=>{setTime(e.target.value)}}>
-                            <option value={reservation.datetime} selected>{moment.utc(reservation.datetime).format("h:mm A")}</option>
-                            {availableReservations.map((res)=>{ 
-                                return <option value={res.datetime}>{moment.utc(res.datetime).format("h:mm A")}</option>
-                            })
-                            }
-                        </select>
-                        <div class="cut">
-                            <label for="time" class="placeholder">time</label>
+                    <div className="flex pt-6 pb-6 justify-between">
+                        <div className="px-1 mt-2.5 text-2xl">
+                            time
+                        </div>
+                        <div className="h-[50px] w-36">
+                            <select className="input" name="time" placeholder=" " onChange={(e)=>{setTime(e.target.value)}}>
+                                <option value={reservation.datetime} selected>{moment.utc(reservation.datetime).format("h:mm A")}</option>
+                                {availableReservations.map((res)=>{ 
+                                    return <option value={res.datetime}>{moment.utc(res.datetime).format("h:mm A")}</option>
+                                })
+                                }
+                            </select>
                         </div>
                     </div>
 
-                    <div className="input-container ic2">
-                        <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
-                            <option value="2" selected>2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                        <div class="cut">
-                            <label for="party" class="placeholder">party of</label>
+                    <div className="flex pt-6 pb-6 justify-between">
+                        <div className="px-1 mt-2.5 text-2xl">
+                            number of guests
+                        </div>
+                        <div className="h-[50px] w-36">
+                            <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
                         </div>
                     </div>
                     
-                    <div className="dr-container">
-                        <div className="gray-subtitle">dietary restrictions</div>
+
+                    <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-400"/> 
+            
+                    <div className="">
+                        <div className="subtitle-larger">dietary restrictions</div>
                         <div>
-                            <div className="column">
+                            <div className="grid gap-4 grid-cols-4 grid-rows-3 mb-10 mt-5">
                                 <input type="checkbox" id="dr1" name="dr1" value="vegan" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr1" className="label">vegan </label>
                                 <input type="checkbox" id="dr2" name="dr2" value="vegetarian" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr2" className="label">vegetarian </label>
                                 <input type="checkbox" id="dr3" name="dr3" value="pescatarian" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr3" className="label">pescatarian </label>
-                            </div>
-                            <div className="column">
                                 <input type="checkbox" id="dr4" name="dr4" value="dairy" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr4" className="label">no dairy </label>
                                 <input type="checkbox" id="dr5" name="dr5" value="nuts" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr5" className="label">no nuts </label>
                                 <input type="checkbox" id="dr6" name="dr6" value="gluten" onChange={(e)=>handleCheck(e)}/>
                                 <label for="dr6" className="label">no gluten </label> 
-                            </div>  
+                            </div>
                             <div className="input-container ic2">
-                                <input className="input" type="tel" name="phone" placeholder=" " onChange={(e)=>{
+                                <input className="input" type="text" name="other" placeholder=" " onChange={(e)=>{
                                     setOther(e.target.value);
                                     }}></input>
                                 <div class="cut">
@@ -162,13 +167,16 @@ function EditReservationCard({setEditingReservation, reservation, member, availa
                             </div>
                         </div>
                     </div>
-                    <button className="submit" type="submit" onClick={e=>handleSubmit(e)}>Submit</button>
+
+
                 </form>   
                 
-                <button className="submit" type="button" onClick={()=>{
-                    // setSelectedEmptyReservationId(false);
-                    setEditingReservation(false)
-                }}>Go back</button>
+                <div className="flex space-x-3">
+                        <button className="submit" type="button" onClick={()=>{
+                            setEditingReservation(false);
+                        }}>back</button>
+                        <button className="light-submit" type="submit" onClick={e=>handleSubmit(e)}>submit</button>
+                    </div>
             </div>
             }
         </div>

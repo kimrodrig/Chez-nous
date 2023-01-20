@@ -42,7 +42,7 @@ function LoginComponent({setUser}) {
                     {error?.login}
                     {error?.password}
                 </div>
-                <button className="submit" type="submit">Submit</button>
+                <button className="submit" type="submit">submit</button>
             </form>
         </div>
     )

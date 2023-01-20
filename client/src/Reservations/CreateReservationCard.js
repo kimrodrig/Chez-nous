@@ -182,7 +182,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                             <div className="px-1 mt-2.5 text-2xl">
                                 number of guests
                             </div>
-                            <div className="h-[50px] mr-0">
+                            <div className="h-[50px] w-36">
                                 <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
                                     <option value="1">1</option>
                                     <option value="2" selected>2</option>
@@ -203,12 +203,10 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                                     <label for="dr1" className="label">vegan </label>
                                     <input type="checkbox" id="dr2" name="dr2" value="vegetarian" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr2" className="label">vegetarian </label>
-                                
                                     <input type="checkbox" id="dr3" name="dr3" value="pescatarian" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr3" className="label">pescatarian </label>
                                     <input type="checkbox" id="dr4" name="dr4" value="dairy" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr4" className="label">no dairy </label>
-                                
                                     <input type="checkbox" id="dr5" name="dr5" value="nuts" onChange={(e)=>handleCheck(e)}/>
                                     <label for="dr5" className="label">no nuts </label>
                                     <input type="checkbox" id="dr6" name="dr6" value="gluten" onChange={(e)=>handleCheck(e)}/>

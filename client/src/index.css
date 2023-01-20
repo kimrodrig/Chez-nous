@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap');
+@import url('https://use.typekit.net/clx1knz.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 html {
   min-height: calc(100% + env(safe-area-inset-top));
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  /* padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); */
 }
 
 body {
@@ -13,10 +16,9 @@ body {
   font-family: 'IM Fell French Canon', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #e3dbdb; */
   background-color: #1e1e1e;
   color: rgb(236, 233, 233);
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   height: 95vh;
 }
@@ -210,6 +212,7 @@ code {
 }
 
 .about-p {
+  font-family: 'Soleil';
   text-align: left;
   font-size: 20px;
   text-align: justify;
@@ -231,6 +234,24 @@ code {
   width: 70%;
   font-family: sans-serif;
 }
+
+.make-res-full {
+  background-color: #c5c5c5;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 30px;
+  outline: 0;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-family: sans-serif;
+}
+
 
 .light-submit {
   background-color: #cac8c8;
@@ -282,4 +303,10 @@ code {
   font-weight: bold;
   width: 70%;
   font-family: sans-serif;
+}
+
+select {
+  text-align: center;
+  text-align-last: center;
+  -moz-text-align-last: center;
 }

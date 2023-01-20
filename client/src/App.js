@@ -42,10 +42,10 @@ function App() {
             <Routes>
               <Route index element={<Video/>}/>
               <Route element={<NavbarLayout/>}>
-                <Route path="/signup" element={<Signup/>}/>
-                <Route path="/about" element={<About/>}/>
-                <Route path="/menu" element={<Menu/>}/>
                 <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
+                <Route path="/menu" element={<Menu/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/signup" element={<Signup/>}/>
                 <Route path="/gallery" element={<Gallery/>}/>
                 <Route path="/success" element={<Success/>}/>
                 <Route path="/unsubscribe" element={<Unsubscribe/>}/>

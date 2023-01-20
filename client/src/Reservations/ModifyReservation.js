@@ -80,24 +80,24 @@ function ModifyReservation({availableReservations}) {
             <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member} availableReservations={availableReservations}/>
         )
     } else return (
-        <div>
+        <div className="px-4">
             { alert !== "" ?
             <div>
                 <div className="subtitle-larger">{alert}</div>
-                <div className="subtitle font-sans" onClick={()=>nav("/reservations")}>make a reservation</div>
+                <button className="make-res-full" onClick={()=>nav("/reservations")}>make a reservation</button>
             </div> :
             <div></div>
             }
             
             { (reservation) ? 
-            <div className="px-3 max-w-xl font-sans">
+            <div className="max-w-xl font-sans">
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
                 <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>edit reservation</button>
                 <button className="submit" type="submit" onClick={()=>cancelReservation(reservation.id)}>cancel reservation</button>
             </div>
             :
-            <div className="px-4">
+            <div>
                 <form onSubmit={submitPhoneNumber}>
                     <div className="input-container ic1">
                         <input className="input" type="text" name="name" placeholder=" " onChange={(e)=>setPhone(e.target.value)}></input>
