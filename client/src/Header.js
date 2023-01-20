@@ -18,7 +18,7 @@ function Header() {
                 </Link>
             </div>
 
-            <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-700"/> 
+            <hr class="w-72 h-0.5 mx-auto my-2 border-0 rounded md:my-5 bg-gray-400"/> 
         </div>
     )
 }

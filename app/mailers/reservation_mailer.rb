@@ -11,8 +11,8 @@ class ReservationMailer < ApplicationMailer
     @reservation = params[:reservation]
     @date = @reservation.datetime.strftime("%b %d")
     @time = @reservation.datetime.strftime('%I:%M %p')
-    @total_deposit = @reservation.party_size * 25
-    @total_payment = @reservation.party_size * 100
+    @total_deposit = @reservation.party_size * 29
+    @total_payment = @reservation.party_size * 120
     @dietaries = @reservation.dietary_restrictions
     @venmo_code = "1-29-" + @member.id.to_s
 

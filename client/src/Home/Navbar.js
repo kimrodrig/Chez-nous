@@ -9,21 +9,21 @@ function Navbar() {
                 <div class="max-w-screen-xl px-5 py-3 mx-auto md:px-6">
                     <div class="flex items-center">
                         <ul class="flex-1 flex-row mt-0 space-x-4 text-base italic tracking-wide">
-                            <NavLink to="/signup" >
-                                signup
-                            </NavLink>
-                            <NavLink to="/about">
-                                about
-                            </NavLink>
-                            <NavLink to="/menu">
-                                menus
-                            </NavLink>   
                             <NavLink to="/reservations">
                                 reservations
+                            </NavLink>
+                            <NavLink to="/menu">
+                                menu
+                            </NavLink>   
+                            <NavLink to="/about">
+                                about
                             </NavLink>
                             <NavLink to="/gallery">
                                 gallery
                             </NavLink>                   
+                            <NavLink to="/signup" >
+                                subscribe
+                            </NavLink>
                         </ul>
                     </div>
                 </div>

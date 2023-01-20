@@ -22,8 +22,13 @@ function Video() {
                             </div>
                         </div>
                         <div className="video-navlink">
-                            <NavLink to="/signup" >
-                                signup
+                            <NavLink to="/reservations">
+                                reservations
+                            </NavLink>
+                        </div>
+                        <div className="video-navlink">
+                            <NavLink to="/menu">
+                                menu
                             </NavLink>
                         </div>
                         <div className="video-navlink">
@@ -32,20 +37,15 @@ function Video() {
                             </NavLink>
                         </div>
                         <div className="video-navlink">
-                            <NavLink to="/menu">
-                                menus
-                            </NavLink>
-                        </div>
-                        <div className="video-navlink">
-                            <NavLink to="/reservations">
-                                reservations
-                            </NavLink>
-                        </div>
-                        <div className="video-navlink">
                             <NavLink to="/gallery">
                                 gallery
                             </NavLink>
                         </div>                    
+                        <div className="video-navlink">
+                            <NavLink to="/signup" >
+                                subscribe
+                            </NavLink>
+                        </div>
                     </div>
                     <div 
                     class="z-30 text-white fixed bottom-0 mb-4 space-x-5"
@@ -70,7 +70,7 @@ function Video() {
                         preLoad="auto"
                         playsInline={true}
                         loop={true}
-                        class="min-w-full min-h-full max-w-screen absolute object-cover"
+                        class="min-w-full min-h-full max-w-screen absolute object-cover opacity-60"
                         ></video>
                 </header>
             </div>

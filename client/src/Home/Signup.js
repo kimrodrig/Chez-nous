@@ -41,7 +41,7 @@ function Signup() {
         <div className="mx-5 pb-10">
             <div className="subtitle">
                 <span>
-                you're invited to join us.
+                join our list. 
                 </span> 
             </div>
             <form onSubmit={submitInfo}>
@@ -63,7 +63,7 @@ function Signup() {
                         <label for="phone" class="placeholder">phone {errors.phone ? "number must be valid" : ""}</label>
                     </div>
                 </div>
-                <button className="submit" type="submit">Submit</button>
+                <button className="submit" type="submit">submit</button>
             </form>
             
         </div>

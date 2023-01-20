@@ -93,11 +93,11 @@ function ModifyReservation({availableReservations}) {
             <div className="px-3 max-w-xl font-sans">
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
-                <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>Edit reservation</button>
-                <button className="submit" type="submit" onClick={()=>cancelReservation(reservation.id)}>Cancel reservation</button>
+                <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>edit reservation</button>
+                <button className="submit" type="submit" onClick={()=>cancelReservation(reservation.id)}>cancel reservation</button>
             </div>
             :
-            <div>
+            <div className="px-4">
                 <form onSubmit={submitPhoneNumber}>
                     <div className="input-container ic1">
                         <input className="input" type="text" name="name" placeholder=" " onChange={(e)=>setPhone(e.target.value)}></input>
@@ -105,7 +105,7 @@ function ModifyReservation({availableReservations}) {
                             <label type="tel" for="phone" class="placeholder">{(error === "") ? "phone" : "phone " + error}</label>
                         </div>
                     </div>
-                    <button className="submit" type="submit">Find my reservation</button>
+                    <button className="submit" type="submit">find my reservation</button>
                 </form>
             </div>
             }

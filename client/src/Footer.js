@@ -3,10 +3,10 @@ import React from 'react'
 function Footer() {
     return (
         <div className="mt-10">
-            <hr class="w-48 h-0.5 mx-auto my-3 border-0 rounded md:my-5 bg-gray-700"/>
+            <hr class="w-48 h-0.5 mx-auto my-3 border-0 rounded md:my-5 bg-gray-400"/>
             <br/>
             <div 
-                class="relative text-white mb-8 space-x-5"
+                class="flex justify-center relative text-white mb-8 space-x-5"
                 >
                     <a type="button" href="http://www.instagram.com/cheznousnyc">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6">

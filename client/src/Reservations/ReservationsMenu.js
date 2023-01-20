@@ -13,14 +13,14 @@ function ReservationsMenu({date, availableReservations}) {
     }, [availableReservations])
 
     return (
-        <div className="pb-4 px-4">
+        <div className="justify-center">
             <div className="subtitle-larger">
                 reservations {reservationsAreOpen ? "are open": "are now closed"} for {date}
             </div>
             { reservationsAreOpen ? 
-            <div className="subtitle font-sans" onClick={()=>nav("/bookreservation")}>
+            <button className="make-res" onClick={()=>nav("/bookreservation")}>
                 make a reservation
-            </div>
+            </button>
             :
             <div className="subtitle font-sans">
                 please join us for our next event.
@@ -28,9 +28,10 @@ function ReservationsMenu({date, availableReservations}) {
                 you'll hear from us, if you're on our list.
             </div>
             }
-            <div className="subtitle font-sans" onClick={()=>nav("/modifyreservation")}>
+            <button className="modify-res" onClick={()=>nav("/modifyreservation")}>
                 modify your reservation
-            </div>
+            </button>
+            
         </div>
     )
     }

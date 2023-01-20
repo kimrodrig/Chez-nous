@@ -47,13 +47,13 @@ function App() {
                 <Route path="/menu" element={<Menu/>}/>
                 <Route path="/reservations" element={<ReservationsMenu date={date} availableReservations={availableReservations}/>}/>
                 <Route path="/gallery" element={<Gallery/>}/>
-              </Route>   
-              <Route element={<Layout/>}>         
                 <Route path="/success" element={<Success/>}/>
                 <Route path="/unsubscribe" element={<Unsubscribe/>}/>
                 <Route path="/successfullyunsubscribed" element={<SuccessfullyUnsubscribed/>}/>
                 <Route path="/bookreservation" element={<BookReservation date={date} availableReservations={availableReservations}/>}/>
                 <Route path="/modifyreservation" element={<ModifyReservation date={date} availableReservations={availableReservations}/>}/>
+              </Route>   
+              <Route element={<Layout/>}>         
                 <Route path="/admin" element={<AdminMenu setDate={setDate} reservations={reservations}/>}/>
               </Route>   
 
