@@ -312,3 +312,7 @@ select {
   text-align-last: center;
   -moz-text-align-last: center;
 }
+
+.active{
+  border-bottom: solid white 3px;
+}

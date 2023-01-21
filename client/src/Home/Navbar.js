@@ -9,19 +9,19 @@ function Navbar() {
                 <div 
                     class="px-5 lg:mx-32 md:mx-16 sm:mx-2 md:text-2xl py-3 flex items-center justify-between flex-row text-base italic tracking-wide"
                 >
-                    <NavLink to="/reservations">
+                    <NavLink to="/reservations" activeClassName="active">
                         reservations
                     </NavLink>
-                    <NavLink to="/menu">
+                    <NavLink to="/menu" activeClassName="active">
                         menu
                     </NavLink>   
-                    <NavLink to="/about">
+                    <NavLink to="/about" activeClassName="active">
                         about
                     </NavLink>
-                    <NavLink to="/gallery">
+                    <NavLink to="/gallery" activeClassName="active">
                         gallery
                     </NavLink>                   
-                    <NavLink to="/signup" >
+                    <NavLink to="/signup" activeClassName="active">
                         subscribe
                     </NavLink>
                 </div>

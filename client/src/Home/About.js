@@ -16,7 +16,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">  
-          The dinner plus pairing costs $149. The way that we’re running the service requires parties to arrive on time, because cooking is timing, and when tardiness throws off the rhythm of plating it can actually affect other tables as well. So that’s our request: come open-minded, hungry, and on time. And bring cash. There’s a $29 deposit that needs to be paid in advance, and once you arrive, you’ll pay $120. Instructions regarding the deposit will be provided upon making a reservation. The exact location will also be disclosed at that point.
+          The dinner plus pairing costs $125. The way that we’re running the service requires parties to arrive on time, because cooking is timing, and when tardiness throws off the rhythm of plating it can actually affect other tables as well. So that’s our request: come open-minded, hungry, and on time. And bring cash. There’s a $25 deposit that needs to be paid in advance, and once you arrive, you’ll pay $120. Instructions regarding the deposit will be provided upon making a reservation. The exact location will also be disclosed at that point.
         </p>
         <br/>
         <p className="about-p">
