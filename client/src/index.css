@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1e1e1e;
-  color: rgb(236, 233, 233);
+  color: #ece9e9;
   /* display: flex; */
   justify-content: center;
   height: 95vh;
@@ -68,6 +68,10 @@ code {
   letter-spacing: 0.2rem;
 }
 
+.video-navlink:hover {
+  scale: 110%;
+}
+
 .logo {
   margin-top: 20px;
   width: 60%;
@@ -76,7 +80,6 @@ code {
   margin-left: auto;
   margin-right: auto;
   display: block;
-
 }
 
 .subtitle {
@@ -179,20 +182,40 @@ code {
   background-color: #6f6c6c;
 }
 
+.submit:hover {
+  scale: 103%;
+}
+
 .modify-res:active {
   background-color: #6f6c6c;
+}
+
+.modify-res:hover {
+  scale: 103%;
 }
 
 .light-submit:active {
   background-color: rgb(173, 170, 170);
 }
 
+.light-submit:hover {
+  scale: 103%;
+}
+
 .make-res:active {
   background-color: rgb(173, 170, 170);
 }
 
+.make-res:hover {
+  scale: 103%;
+}
+
 .timeslot:active {
   background-color: rgb(173, 170, 170);
+}
+
+.timeslot:hover {
+  scale: 103%;
 }
 
 .container {
@@ -256,6 +279,13 @@ code {
   font-family: sans-serif;
 }
 
+.make-res-full:active {
+  background-color: rgb(173, 170, 170);
+}
+
+.make-res-full:hover {
+  scale: 103%;
+}
 
 .light-submit {
   background-color: #d5d5d5;
