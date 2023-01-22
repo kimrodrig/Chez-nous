@@ -24,6 +24,7 @@ function BookReservation({date, availableReservations}) {
                 </div>
             </div>
             }
+            
         </div>
     )
     }

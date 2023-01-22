@@ -125,7 +125,7 @@ function EditReservationCard({setEditingReservation, reservation, member, availa
 
                     <div className="flex pt-6 pb-6 justify-between">
                         <div className="px-1 mt-2.5 text-2xl">
-                            number of people
+                            total guests
                         </div>
                         <div className="h-[50px] w-36">
                             <select className="input" name="party" placeholder=" " onChange={(e)=>{setPartySize(e.target.value)}}>
