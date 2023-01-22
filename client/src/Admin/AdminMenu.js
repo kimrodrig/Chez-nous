@@ -7,7 +7,7 @@ function AdminMenu({reservations}) {
     const [user, setUser] = useState("");
 
     return (
-        <div>
+        <div className="flex justify-center">
             {(user === "") ?
             <LoginComponent setUser={setUser}/>
             :

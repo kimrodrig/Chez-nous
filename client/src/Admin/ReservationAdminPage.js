@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ReservationCard from './ReservationCard'
+import ReservationRow from './ReservationRow'
 
 function ReservationAdminPage({reservations}) {
 
@@ -39,9 +39,12 @@ function ReservationAdminPage({reservations}) {
             </form>
             <br/>
             <div>reservations:</div>
-            {reservations.map(reservation => 
-                <ReservationCard reservation={reservation}/>
-            )}
+            <table>
+                {reservations.map(reservation => 
+                    <ReservationRow reservation={reservation}/>
+                )}
+            </table>
+
         </div>
     )
 }

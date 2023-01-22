@@ -1,7 +1,9 @@
 import React from "react";
-import { NavLink} from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 
 function Navbar() {
+
+    const { pathname } = useLocation();
 
     return (
         <div class="navbar sticky top-0 z-50 bg-[#1e1e1e]"> 

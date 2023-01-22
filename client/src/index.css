@@ -346,3 +346,28 @@ select {
 .active{
   border-bottom: solid white 3px;
 }
+
+.available-cell {
+  background-color: white;
+}
+
+.booked-cell {
+  background-color: black;
+}
+
+.signup-button {
+  background-color: #d5d5d5;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-size: 22px;
+  height: 35px;
+  margin-top: 5px;
+  outline: 0;
+  text-align: center;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
