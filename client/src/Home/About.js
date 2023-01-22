@@ -22,7 +22,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">
-          We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance! You can do so when you book a reservation. 
+          We have a vegan menu and will try to accommodate your dietary restrictions, but please tell us in advance. You can do so when you book a reservation. 
         </p>
         <br/>
         <p className="about-p">

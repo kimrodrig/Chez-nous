@@ -8,7 +8,7 @@ function Video() {
     return (
             <div>
                 <header
-                class="flex items-center justify-center h-screen overflow-hidden"
+                class="flex items-center justify-center h-screen"
                 >
                     <div
                     class="relative z-30 p-5 text-2xl text-white bg-opacity-50 rounded-xl"
@@ -70,7 +70,7 @@ function Video() {
                         preLoad="auto"
                         playsInline={true}
                         loop={true}
-                        class="min-w-full min-h-full max-w-screen absolute object-cover opacity-60"
+                        class="min-w-full max-h-full max-w-screen absolute object-cover opacity-60"
                         ></video>
                 </header>
             </div>
