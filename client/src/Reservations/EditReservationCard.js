@@ -106,7 +106,7 @@ function EditReservationCard({setEditingReservation, reservation, member, availa
             // datetime={selectedReservation.datetime}
             />
             :
-            <div>
+            <div className="px-8">
                 <form onSubmit={()=>{}}>
                     <div className="flex pt-6 pb-6 justify-between">
                         <div className="px-1 mt-2.5 text-2xl">

@@ -80,7 +80,7 @@ function ModifyReservation({availableReservations}) {
             <EditReservationCard setEditingReservation={setEditingReservation} reservation={reservation} member={member} availableReservations={availableReservations}/>
         )
     } else return (
-        <div className="px-4">
+        <div className="">
             { alert !== "" ?
             <div>
                 <div className="subtitle-larger">{alert}</div>
@@ -90,23 +90,23 @@ function ModifyReservation({availableReservations}) {
             }
             
             { (reservation) ? 
-            <div className="max-w-xl font-sans">
+            <div className="font-sans">
                 <div className="subtitle">{member.name}, you have a reservation at {moment.utc(reservation.datetime).format("h:mm A")} for {reservation.party_size}
                 </div>
-                <button className="submit" type="submit" onClick={()=>setEditingReservation(true)}>edit reservation</button>
-                <button className="submit" type="submit" onClick={()=>cancelReservation(reservation.id)}>cancel reservation</button>
+                <button className="make-res" type="submit" onClick={()=>setEditingReservation(true)}>edit reservation</button>
+                <button className="modify-res" type="submit" onClick={()=>cancelReservation(reservation.id)}>cancel reservation</button>
             </div>
             :
-            <div>
-                <form onSubmit={submitPhoneNumber}>
+            <div className="w-80">
+                <form>
                     <div className="input-container ic1">
                         <input className="input" type="text" name="name" placeholder=" " onChange={(e)=>setPhone(e.target.value)}></input>
                         <div class="cut">
                             <label type="tel" for="phone" class="placeholder">{(error === "") ? "phone" : "phone " + error}</label>
                         </div>
                     </div>
-                    <button className="submit" type="submit">find my reservation</button>
                 </form>
+                <button className="submit" type="submit" onClick={submitPhoneNumber}>find my reservation</button>
             </div>
             }
             

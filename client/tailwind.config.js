@@ -9,6 +9,7 @@ module.exports = {
     },
     letterSpacing: {
       wide: '0.03em',
+      wider: '0.2em',
       widest: '0.27em',
     }
   },

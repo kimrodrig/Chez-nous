@@ -130,20 +130,19 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
     
     return (
         <div>
-            
-            <div className="subtitle-larger">
-                {date}
-            </div>
             { reservationSubmitted ?
             <ReservationSuccessful member={member} reservation={reservation}/>
             :
             <div>
-                <div className="subtitle-larger font-sans">
+                <div className="pt-4 text-2xl font-sans uppercase tracking-wider">
+                    {date}
+                </div>
+                <div className="subtitle-larger font-sans tracking-wider">
                     {moment.utc(selectedReservation.datetime).format("h:mm A")} 
                 </div>
 
                 { showNameAndEmailField ? 
-                <div className="subtitle pb-5">
+                <div className="subtitle font-sans">
                     this phone number is not yet on our list.
                 </div> :
                 <div></div>

@@ -1,15 +1,46 @@
 import React from 'react'
-import image1 from '../img/photos/1.JPG';
-import image2 from '../img/photos/2.JPG';
-import image3 from '../img/photos/3.JPG';
-import image4 from '../img/photos/4.JPG';
-import image5 from '../img/photos/5.JPG';
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper";
+
+import image1 from '../img/photos/crudo_birds_eye.JPG';
+import image2 from '../img/photos/crudo_close_up.JPG';
+import image3 from '../img/photos/negroni.JPG';
+import image4 from '../img/photos/7.JPG';
+import image5 from '../img/photos/1.JPG';
 
 function Gallery() {
-  return (
-    <div className="p-4 mt-6 max-w-xl">
-        <div className="border-[10px]">
-            <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+    return (
+        <div className="p-4 mt-6 sm:w-2/3 md:w-1/2 w-full">
+            <div className="border-[10px] max-w-full">
+                <Swiper navigation={true} modules={[Navigation]} autoHeight={true} loop={true} className="mySwiper">
+                    <SwiperSlide>
+                        <img
+                            src={image1}
+                            class="block w-full"
+                            alt="..."
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={image2}
+                            class="block w-full"
+                            alt="..."
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={image3}
+                            class="block w-full"
+                            alt="..."
+                        /> 
+                    </SwiperSlide>
+
+                </Swiper>
+            {/* <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
                 <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-2">
                     <button
                     type="button"
@@ -101,7 +132,7 @@ function Gallery() {
                     <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            </div>
+            </div> */}
         </div>
     </div>
   )

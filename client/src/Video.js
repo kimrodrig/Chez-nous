@@ -70,7 +70,7 @@ function Video() {
                         preLoad="auto"
                         playsInline={true}
                         loop={true}
-                        class="min-w-full max-h-full max-w-screen absolute object-cover opacity-60"
+                        class="min-w-full min-h-full max-h-full max-w-screen absolute object-cover opacity-60"
                         ></video>
                 </header>
             </div>

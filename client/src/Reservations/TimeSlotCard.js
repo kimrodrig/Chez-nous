@@ -10,7 +10,7 @@ function TimeSlotCard({reservation, setSelectedEmptyReservationId}) {
 
     return (
         <div>
-            <button className="timeslot" onClick={()=>setSelectedEmptyReservationId(reservation.id)}>
+            <button className="timeslot lowercase tracking-wide" onClick={()=>setSelectedEmptyReservationId(reservation.id)}>
                 {time}
             </button>
         </div>
