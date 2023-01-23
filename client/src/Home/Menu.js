@@ -2,7 +2,6 @@ import React from 'react'
 import image1 from '../img/menus/1.png';
 import image2 from '../img/menus/2.png';
 import image3 from '../img/menus/3.png';
-import image4 from '../img/menus/4.png';
 
 function Menu() {
   return (
@@ -30,12 +29,6 @@ function Menu() {
                     data-bs-slide-to="2"
                     aria-label="Slide 3"
                     ></button>
-                    <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide-to="3"
-                    aria-label="Slide 4"
-                    ></button>
                 </div>
                 <div class="carousel-inner relative w-full overflow-hidden">
                     <div class="carousel-item active relative float-left w-full">
@@ -61,13 +54,6 @@ function Menu() {
                     <div class="carousel-caption hidden md:block absolute text-center">
                         <h5 class="text-xl"></h5>
                     </div>
-                    </div>
-                    <div class="carousel-item relative float-left w-full">
-                    <img
-                        src={image4}
-                        class="block w-full"
-                        alt="..."
-                    />
                     </div>
                 </div>
                 <button

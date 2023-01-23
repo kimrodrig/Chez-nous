@@ -18,7 +18,7 @@ function About() {
         </p>
         <br/>
         <p className="about-p">  
-          The dinner plus pairing costs $125. The way we’re running the service requires parties to arrive on time, because cooking is timing, and when tardiness throws off the rhythm of plating it can actually affect other tables as well. So that’s our request: come open-minded, hungry, and on time. Further instructions and the exact location will be sent to you after you make a reservation.
+          The dinner plus pairing costs $125. The way we’re running the service requires parties to arrive on time, since tardiness can throw off the rhythm of the kitchen and affect other tables as well. So we ask that you come open-minded, hungry, and on time. Further instructions and the exact location will be sent to you after you make a reservation.
         </p>
         <br/>
         <p className="about-p">
