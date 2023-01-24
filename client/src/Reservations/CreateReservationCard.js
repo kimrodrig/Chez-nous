@@ -98,8 +98,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
     } 
 
     function submitReservation(id){
-        setShowNameAndEmailField(false)
-
+        
         const body = JSON.stringify({
             reservation: {
                 dietary_restrictions: dietaryRestrictions,
@@ -107,7 +106,7 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
                 member_id: id
             }
         })
-
+        
         fetch(`/api/editreservation/${selectedReservation.id}`, {
             method: "PATCH",
             headers: {
@@ -117,13 +116,14 @@ function CreateReservationCard({selectedReservation, setSelectedEmptyReservation
             body: body
         })
         .then(res=> {if (res.status === 200) {
-                res.json().then(data=>setReservation(data))
-                setReservationSubmitted(true);
-            } else {
-                console.log("failure")
-                // (res.json()).then(data=>setErrors(data.errors))
-            }
+            res.json().then(data=>setReservation(data))
+            setReservationSubmitted(true);
+        } else {
+            console.log("failure")
+            // (res.json()).then(data=>setErrors(data.errors))
+        }
         })
+        setShowNameAndEmailField(false)
     }
 
     function signupMember(){
