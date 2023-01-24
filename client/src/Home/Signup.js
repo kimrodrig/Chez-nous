@@ -41,7 +41,7 @@ function Signup() {
         <div className="pb-5 w-80">
             <div className="subtitle">
                 <span>
-                join our list. 
+                join our mailing list. 
                 </span> 
             </div>
             <form onSubmit={submitInfo}>

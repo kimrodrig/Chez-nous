@@ -12,7 +12,7 @@ function Header() {
                     <div className="title -mt-3 -mb-2">
                     chez nous
                     </div> 
-                    <div className="uppercase font-sans tracking-widest mb-5">
+                    <div className="uppercase font-['Soleil'] tracking-widest mb-5">
                     modern dining experience
                     </div>
                 </Link>

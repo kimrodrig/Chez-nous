@@ -17,7 +17,7 @@ function Video() {
                             <div className="video-title mt-5 mb-6">
                                 chez nous
                             </div> 
-                            <div className="video-subtitle uppercase font-sans tracking-widest font-semibold mb-5">
+                            <div className="video-subtitle uppercase font-['Soleil'] tracking-widest font-semibold mb-5">
                                 modern dining experience
                             </div>
                         </div>

@@ -12,7 +12,7 @@ function BookReservation({date, availableReservations}) {
             ?
             <CreateReservationCard selectedReservation={availableReservations.filter(res => res.id === selectedEmptyReservationId)[0]} setSelectedEmptyReservationId={setSelectedEmptyReservationId} date={date}/>
             :
-            <div className="px-3 max-w-xl">
+            <div className="px-8 max-w-xl">
                 <div className="subtitle-larger">
                     book a reservation for {date}
                 </div>

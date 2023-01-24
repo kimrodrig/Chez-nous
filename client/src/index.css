@@ -6,8 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.swiper-button-next::after { color: white; }
-.swiper-button-prev::after { color: white; }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: white;
+}
 
 html {
   min-height: calc(100% + env(safe-area-inset-top));
@@ -47,7 +49,8 @@ code {
 
 .title {
   font-style: italic;
-  font-size: 80px;
+  font-family: 'IM Fell French Canon';
+  font-size: 65px;
   font-weight: 600;
 }
 
@@ -73,9 +76,11 @@ code {
 
 .logo {
   margin-top: 20px;
-  width: 60%;
-  max-height: 250px;
-  max-width: 250px;
+  width: 35%;
+  min-width: 100px;
+  min-height: 100px;
+  max-height: 150px;
+  max-width: 150px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -88,6 +93,7 @@ code {
   margin-bottom: 10px;
   width: 100%;
   letter-spacing: 0.025em;
+  font-family: 'Soleil';
 }
 
 .subtitle-larger {
@@ -95,6 +101,7 @@ code {
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 20px;
+  
 }
 
 .input-container {
@@ -122,11 +129,21 @@ code {
   outline: 0;
   padding: 4px 20px 0;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
 }
 
 .cut {
-  /* background-color: #15172b; */
+  border-radius: 10px;
+  height: 20px;
+  left: 0px;
+  position: absolute;
+  top: -2px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 300px;
+}
+
+.cut-down {
   border-radius: 10px;
   height: 20px;
   left: 0px;
@@ -143,7 +160,12 @@ code {
 
 .input:focus ~ .cut,
 .input:not(:placeholder-shown) ~ .cut {
-  transform: translateY(-38px);
+  transform: translateY(-40px);
+}
+
+.input:focus ~ .cut-down,
+.input:not(:placeholder-shown) ~ .cut-down {
+  transform: translateY(42px);
 }
 
 .placeholder {
@@ -172,9 +194,9 @@ code {
   margin-top: 30px;
   outline: 0;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -258,9 +280,9 @@ code {
   margin-top: 30px;
   outline: 0;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   width: 80%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -277,9 +299,9 @@ code {
   margin-top: 30px;
   outline: 0;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -304,9 +326,9 @@ code {
   margin-top: 30px;
   outline: 0;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -323,9 +345,9 @@ code {
   margin-top: 30px;
   outline: 0;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   width: 80%;
-  font-family: sans-serif;
+  font-family: 'Soleil';
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -337,19 +359,63 @@ code {
   box-sizing: border-box;
   color: #3a3a3a;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 22px;
   height: 50px;
   margin-top: 15px;
   text-align: center;
   font-weight: bold;
   width: 100%;
-  font-family: 'Roboto Condensed';
+  font-family: 'Soleil';
+}
+
+.dietary-restriction-unselected {
+  background-color: #d5d5d5;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #3a3a3a;
+  cursor: pointer;
+  font-size: 15px;
+  height: 50px;
+  outline: 0;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  font-family: 'Soleil';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dietary-restriction-selected {
+  background-color: #4d4a4a;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #d5d5d5;
+  cursor: pointer;
+  font-size: 15px;
+  height: 50px;
+  outline: 0;
+  text-align: center;
+  font-weight: 800;
+  font-style: italic;
+  width: 100%;
+  font-family: 'Soleil';
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 select {
   text-align: center;
   text-align-last: center;
   -moz-text-align-last: center;
+  padding-right: 5px;
 }
 
 .active{

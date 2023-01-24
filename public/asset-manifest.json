@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0af23e6.css",
-    "main.js": "/static/js/main.540688cf.js",
+    "main.css": "/static/css/main.415c19fb.css",
+    "main.js": "/static/js/main.1e84b0f4.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/video.mp4": "/static/media/video.ce690cf371d8ab87a0c9.mp4",
-    "static/media/7.JPG": "/static/media/7.1e4775b747fcd0ee59f8.JPG",
-    "static/media/crudo_close_up.JPG": "/static/media/crudo_close_up.1e4775b747fcd0ee59f8.JPG",
-    "static/media/crudo_birds_eye.JPG": "/static/media/crudo_birds_eye.9c754a5ff370b0533854.JPG",
+    "static/media/negroni.JPG": "/static/media/negroni.52a4ff7e5680ef3c8acc.JPG",
     "static/media/1.JPG": "/static/media/1.d5b5d38670b7bd261728.JPG",
-    "static/media/negroni.JPG": "/static/media/negroni.ac958658a1c0223efc53.JPG",
+    "static/media/crudo.JPG": "/static/media/crudo.dcf8cb000af431f43ef6.JPG",
+    "static/media/panna_cotta.JPG": "/static/media/panna_cotta.a88ff5b0dbe935a49ad2.JPG",
+    "static/media/raviolo.JPG": "/static/media/raviolo.cce15a8099c030615cb2.JPG",
     "static/media/logo.png": "/static/media/logo.b607bc1ebcae9464ba73.png",
     "static/media/1.png": "/static/media/1.6792fd8862d85d158365.png",
     "static/media/2.png": "/static/media/2.4950efa8b3a0a94a9f6b.png",
     "static/media/3.png": "/static/media/3.828fd2df85c6c69e486f.png",
     "index.html": "/index.html",
-    "main.b0af23e6.css.map": "/static/css/main.b0af23e6.css.map",
-    "main.540688cf.js.map": "/static/js/main.540688cf.js.map",
+    "main.415c19fb.css.map": "/static/css/main.415c19fb.css.map",
+    "main.1e84b0f4.js.map": "/static/js/main.1e84b0f4.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0af23e6.css",
-    "static/js/main.540688cf.js"
+    "static/css/main.415c19fb.css",
+    "static/js/main.1e84b0f4.js"
   ]
 }
